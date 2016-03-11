@@ -15,7 +15,8 @@
       "destinationY": 6,
       "destinationWidth": 110,
       "destinationHeight": 110
-    }
+    },
+    "drag": {}
   },
   "symbolSquare": {
     "name": "symbolSquare",
@@ -33,7 +34,8 @@
       "destinationY": 6,
       "destinationWidth": 110,
       "destinationHeight": 110
-    }
+    },
+    "drag": {}
   },
   "symbolStar": {
     "name": "symbolStar",
@@ -51,7 +53,8 @@
       "destinationY": 6,
       "destinationWidth": 110,
       "destinationHeight": 110
-    }
+    },
+    "drag": {}
   },
   "symbolTriangle": {
     "name": "symbolTriangle",
@@ -69,6 +72,7 @@
       "destinationY": 6,
       "destinationWidth": 110,
       "destinationHeight": 110
-    }
+    },
+    "drag": {}
   }
 }
