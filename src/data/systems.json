@@ -141,6 +141,12 @@
    ]
   },
   {
+   "name": "./systems/renderer/rain",
+   "scenes": [
+    "title", "main", "credits"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
     "title", "main", "credits"
