@@ -87,6 +87,12 @@
    ]
   },
   {
+   "name": "./systems/renderer/fill-solid-color",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/renderer/sample-renderer-system",
    "scenes": [
     "main"
