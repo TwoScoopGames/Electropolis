@@ -71,6 +71,20 @@
       "destinationHeight": 110
     }
   },
+  "column": {
+    "name": "column",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 3
+    },
+    "size": {
+      "width": 149,
+      "height": 1043
+    },
+    "fillColor": "green",
+    "dragY": {}
+  },
   "row": {
     "name": "row",
     "position": {
@@ -79,7 +93,7 @@
       "z": 2
     },
     "size": {
-      "width": 1080,
+      "width": 1043,
       "height": 149
     },
     "fillColor": "red",

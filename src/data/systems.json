@@ -37,7 +37,19 @@
    ]
   },
   {
+   "name": "./systems/simulation/drag-position-y",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/simulation/match-parent-x",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/simulation/match-parent-y",
    "scenes": [
     "main"
    ]
