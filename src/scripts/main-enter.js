@@ -16,6 +16,7 @@ var gridPadding = 32;
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
+
   var gridPos = game.entities.get(2, "position");
   for (var y = 0; y < gridHeight; y++) {
     for (var x = 0; x < gridWidth; x++) {
