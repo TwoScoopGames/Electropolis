@@ -6,8 +6,8 @@ function randomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function makeTile(game, x, y, row, rowX, column, columnY) {
-  var tile = game.instantiatePrefab(randomItem(symbols));
+function makeTile(game, prefabs, x, y, row, rowX, column, columnY) {
+  var tile = game.instantiatePrefab(prefabs);
   var position = game.entities.get(tile, "position");
   position.x = x;
   position.y = y;
@@ -27,6 +27,14 @@ var gridHeight = 7;
 var tileSize = 123;
 var tilePadding = 26;
 var gridPadding = 32;
+
+var grid = [];
+for (var y = 0; y < gridHeight; y++) {
+  grid.push([]);
+  for (var x = 0; x < gridWidth; x++) {
+    grid[y][x] = randomItem(symbols);
+  }
+}
 
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
@@ -52,7 +60,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
       colPosition.x = tileX - (tilePadding / 2);
       colPosition.y = gridPos.y + gridPadding - (tilePadding / 2);
 
-      makeTile(game, tileX, tileY, row, rowPosition.x, cols[x], colPosition.y);
+      makeTile(game, grid[y][x], tileX, tileY, row, rowPosition.x, cols[x], colPosition.y);
     }
   }
 };
