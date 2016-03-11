@@ -37,6 +37,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/match-parent-x",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/control-player",
    "scenes": [
     "main"
