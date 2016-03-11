@@ -7,6 +7,18 @@
    ]
   },
   {
+   "name": "splat-ecs/lib/systems/match-center-x",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "splat-ecs/lib/systems/match-center-y",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/advance-timers",
    "scenes": [
     "main"
