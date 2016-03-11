@@ -1,61 +1,120 @@
 {
- "main": [
-  {
-   "id": 0,
-   "name": "camera",
-   "camera": true,
-   "position": {
-    "x": 0,
-    "y": 0
-   },
-   "matchCanvasSize": true,
-   "matchCenterX": {
-     "id": 1
-   },
-   "matchCenterY": {
-     "id": 1
-   },
-   "fillColor": "#000000"
-  },
-  {
-   "id": 1,
-   "name": "viewport",
-   "position": {
-    "x": 0,
-    "y": 0
-   },
-   "size": {
-    "width": 1080,
-    "height": 1920
-   }
-  },
-  {
-   "id": 2,
-   "name": "grid",
-   "position": {
-    "x": 0,
-    "y": 250,
-    "z": -1
-   },
-   "image": {
-    "name": "grid.png"
-   }
-  },
-  {
-    "id": 3,
-    "name": "cloud1",
-    "position": {
-      "x": 0,
-      "y": 0,
-      "z": -2
-    },
-    "velocity": {
-      "x": -0.1,
-      "y": 0
-    },
-    "image": {
-      "name": "cloud1.png"
-    }
-  }
- ]
+	"title": [
+		{
+			"id": 0,
+			"name": "camera",
+			"camera": true,
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"matchCanvasSize": true,
+			"matchCenterX": {
+				"id": 1
+			},
+			"matchCenterY": {
+				"id": 1
+			},
+			"fillColor": "#000000"
+		},
+		{
+			"id": 1,
+			"name": "viewport",
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"size": {
+				"width": 1080,
+				"height": 1920
+			}
+		},
+		{
+			"id": 2,
+			"name": "play-button",
+			"change-scene" : "main",
+			"position": {
+				"x": 236,
+				"y": 1334
+			},
+			"size": {
+				"width": 588,
+				"height": 183
+			},
+			"image":{
+				"name": "button-play-up.png"
+			},
+			"pressed-image":{
+				"name": "button-play-down.png"
+			},
+			"timers": {
+				"pressed": {
+					"running": false,
+					"time": 0,
+					"max": 1000,
+					"script": "./scripts/change-scene"
+				}
+			}
+		}
+
+	],
+	"main": [
+		{
+			"id": 0,
+			"name": "camera",
+			"camera": true,
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"matchCanvasSize": true,
+			"matchCenterX": {
+				"id": 1
+			},
+			"matchCenterY": {
+				"id": 1
+			},
+			"fillColor": "#000000"
+		},
+		{
+			"id": 1,
+			"name": "viewport",
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"size": {
+				"width": 1080,
+				"height": 1920
+			}
+		},
+		{
+			"id": 2,
+			"name": "grid",
+			"position": {
+				"x": 0,
+				"y": 250,
+				"z": -1
+			},
+			"image": {
+				"name": "grid.png"
+			}
+		},
+		{
+			"id": 3,
+			"name": "cloud1",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": -2
+			},
+			"velocity": {
+				"x": -0.1,
+				"y": 0
+			},
+			"image": {
+				"name": "cloud1.png"
+			}
+		}
+	]
 }
