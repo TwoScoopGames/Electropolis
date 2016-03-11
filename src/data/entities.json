@@ -46,14 +46,6 @@
 			},
 			"pressed-image":{
 				"name": "button-play-down.png"
-			},
-			"timers": {
-				"pressed": {
-					"running": false,
-					"time": 0,
-					"max": 1000,
-					"script": "./scripts/change-scene"
-				}
 			}
 		},
 		{
