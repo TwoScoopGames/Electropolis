@@ -31,7 +31,7 @@
    ]
   },
   {
-   "name": "./systems/simulation/drag-position",
+   "name": "./systems/simulation/drag-position-x",
    "scenes": [
     "main"
    ]
