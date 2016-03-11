@@ -31,6 +31,30 @@
    ]
   },
   {
+   "name": "./systems/simulation/drag-position-x",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/simulation/drag-position-y",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/simulation/match-parent-x",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/simulation/match-parent-y",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/control-player",
    "scenes": [
     "main"
