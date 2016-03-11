@@ -1,7 +1,13 @@
 "use strict";
 
+var symbols = ["symbolCircle", "symbolSquare", "symbolStar", "symbolTriangle"];
+
+function randomItem(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 function makeTile(game, x, y) {
-  var tile = game.instantiatePrefab("symbolCircle");
+  var tile = game.instantiatePrefab(randomItem(symbols));
   var position = game.entities.get(tile, "position");
   position.x = x;
   position.y = y;
