@@ -1,1 +1,14 @@
-{}
+{
+  "symbolCircle": {
+    "name": "symbolCircle",
+    "position": {
+     "x": 0,
+     "y": 0
+    },
+    "size": {
+     "width": 122,
+     "height": 122
+    },
+    "fillColor": "#00ff00"
+  }
+}
