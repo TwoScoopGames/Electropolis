@@ -34,7 +34,8 @@
    "name": "grid",
    "position": {
     "x": 0,
-    "y": 250
+    "y": 250,
+    "z": -1
    },
    "image": {
     "name": "grid.png"
@@ -50,7 +51,8 @@
    "size": {
     "width": 100,
     "height": 100
-   }
+   },
+   "fillColor": "#00ff00"
   }
  ]
 }
