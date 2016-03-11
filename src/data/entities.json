@@ -160,6 +160,22 @@
 			"pressed-image":{
 				"name": "button-pause-down.png"
 			}
+		},
+    {
+			"id": 5,
+			"name": "town",
+			"position": {
+				"x": 153,
+				"y": 1713,
+				"z": -2
+			},
+      "size":{
+        "width": 953,
+        "height": 207
+      },
+			"image": {
+				"name": "town.png"
+			}
 		}
 	],
   "credits": [
