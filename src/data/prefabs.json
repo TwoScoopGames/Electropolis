@@ -9,6 +9,12 @@
      "width": 122,
      "height": 122
     },
-    "fillColor": "#00ff00"
+    "image": {
+      "name": "symbol-cir.png",
+      "destinationX": 6,
+      "destinationY": 6,
+      "destinationWidth": 110,
+      "destinationHeight": 110
+    }
   }
 }
