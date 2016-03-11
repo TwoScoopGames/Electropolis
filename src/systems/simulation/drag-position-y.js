@@ -22,12 +22,25 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         && my < position.y + size.height;
 
     if (game.inputs.buttonPressed("action") && inside) {
+      drag.startX = position.x;
+      drag.startY = position.y;
       drag.offsetX = position.x - mx;
       drag.offsetY = position.y - my;
     } else if (game.inputs.button("action") && drag.offsetX !== undefined && drag.offsetY !== undefined) {
-      // position.x = mx + drag.offsetX;
-      position.y = my + drag.offsetY;
-    } else if (game.inputs.buttonReleased("action")) {
+      var dx = Math.abs(mx + drag.offsetX - drag.startX);
+      var dy = Math.abs(my + drag.offsetY - drag.startY);
+      if (dx > dy && dy > 30) {
+        position.x = drag.startX;
+        position.y = drag.startY;
+        delete drag.offsetX;
+        delete drag.offsetY;
+      } else {
+        // position.x = mx + drag.offsetX;
+        position.y = my + drag.offsetY;
+      }
+    } else if (game.inputs.buttonReleased("action") && drag.offsetX !== undefined && drag.offsetY !== undefined) {
+      position.x = drag.startX;
+      position.y = drag.startY;
       delete drag.offsetX;
       delete drag.offsetY;
     }
