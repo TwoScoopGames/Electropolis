@@ -23,7 +23,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
 
-  powerLevel.set(100);
+  powerLevel.set(50);
   generatePowerThresholds(game);
   grid.create();
   grid.createEntities(game);

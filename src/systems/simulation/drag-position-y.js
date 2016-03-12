@@ -14,7 +14,7 @@ function zapMatches(game, matches) {
     spawnLightning(x1, y1, x2, y2, game, 0);
 
     var pl = powerLevel.get();
-    pl += matches[i].length;
+    pl += matches[i].length * 2;
     powerLevel.set(pl);
 
     var powerLines = game.instantiatePrefab("powerLines");
