@@ -50,15 +50,18 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       if (Math.abs(tilesMoved) !== 0) {
         var column = game.entities.get(entity, "column");
         console.log("column", column, "moved", tilesMoved);
-        grid.rotateColumn(column, tilesMoved);
-        grid.destroyEntities(game);
-        grid.createEntities(game);
+        var matches = grid.rotateColumn(column, tilesMoved);
+        if (matches.length > 0) {
+          grid.destroyEntities(game);
+          grid.createEntities(game);
+          return;
+        }
       }
 
-      // position.x = drag.startX;
-      // position.y = drag.startY;
-      // delete drag.offsetX;
-      // delete drag.offsetY;
+      position.x = drag.startX;
+      position.y = drag.startY;
+      delete drag.offsetX;
+      delete drag.offsetY;
     }
   }, "drag-position-y");
 };
