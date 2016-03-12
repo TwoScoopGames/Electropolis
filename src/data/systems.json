@@ -31,6 +31,12 @@
    ]
   },
   {
+    "name": "./systems/simulation/trigger-lightning",
+    "scenes": [
+      "main"
+    ]
+  },
+  {
    "name": "./systems/simulation/drag-position-x",
    "scenes": [
     "title", "main", "credits"
@@ -103,6 +109,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/windows95",
+   "scenes": [
+    "title", "main", "credits"
+   ]
+  },
+  {
    "name": "./systems/simulation/scene-change-button",
    "scenes": [
     "title", "main", "credits"
@@ -140,11 +152,12 @@
     "title", "main", "credits"
    ]
   },
+
   {
-   "name": "splat-ecs/lib/systems/draw-rectangles",
-   "scenes": [
-    "title", "main", "credits"
-   ]
+    "name": "./systems/renderer/draw-lightning",
+    "scenes": [
+      "main"
+    ]
   },
   {
    "name": "./systems/renderer/rain",

@@ -1,10 +1,22 @@
 "use strict";
 
-var symbols = ["symbolCircle", "symbolSquare", "symbolStar", "symbolTriangle"];
-
-function randomItem(array) {
-  return array[Math.floor(Math.random() * array.length)];
+function shuffle(o) {
+  for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
 }
+
+function generatePowerThresholds(game) {
+  var entitiesWithPowerThreshold = game.entities.find("powerThreshold");
+  var newArray = [];
+  console.log("There should be " + entitiesWithPowerThreshold.length + " Power Threshold levels.");
+  for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
+    newArray.push(i);
+  }
+  return newArray;
+}
+
+var grid = require("../grid");
+grid.create();
 
 function makeTile(game, prefabs, x, y, row, rowX, column, columnY) {
   var tile = game.instantiatePrefab(prefabs);
@@ -29,69 +41,62 @@ function makeTile(game, prefabs, x, y, row, rowX, column, columnY) {
   return tile;
 }
 
-var gridWidth = 7;
-var gridHeight = 7;
-var tileSize = 123;
-var tilePadding = 26;
-var gridPadding = 32;
-
-var grid = [];
-for (var y = 0; y < gridHeight; y++) {
-  grid.push([]);
-  for (var x = 0; x < gridWidth; x++) {
-    grid[y][x] = randomItem(symbols);
-  }
-}
-
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
+
+  var powerThresholds = shuffle(generatePowerThresholds(game));
+  console.log(powerThresholds);
+  var entitiesWithPowerThreshold = game.entities.find("powerThreshold");
+  for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
+    game.entities.set(entitiesWithPowerThreshold[i], "powerThreshold", powerThresholds[i]);
+  }
 
   var cols = [];
   var rows = [];
 
   var gridPos = game.entities.get(2, "position");
   var getTileY = function(y) {
-    return gridPos.y + gridPadding + (y * (tileSize + tilePadding));
+    return gridPos.y + grid.gridPadding + (y * (grid.tileSize + grid.tilePadding));
   };
   var getTileX = function(x) {
-    return gridPos.x + gridPadding + (x * (tileSize + tilePadding));
+    return gridPos.x + grid.gridPadding + (x * (grid.tileSize + grid.tilePadding));
   };
 
   var x, y, row, col;
-  for (y = 0; y < gridHeight; y++) {
+  for (y = 0; y < grid.gridHeight; y++) {
     row = game.instantiatePrefab("row");
     rows.push(row);
     var rowPosition = game.entities.get(row, "position");
-    rowPosition.x = gridPos.x + gridPadding - (tilePadding / 2);
-    rowPosition.y = getTileY(y) - (tilePadding / 2);
+    rowPosition.x = gridPos.x + grid.gridPadding - (grid.tilePadding / 2);
+    rowPosition.y = getTileY(y) - (grid.tilePadding / 2);
 
-    for (x = 0; x < gridWidth; x++) {
+    for (x = 0; x < grid.gridWidth; x++) {
       if (cols[x] === undefined) {
         cols[x] = game.instantiatePrefab("column");
       }
       col = cols[x];
       var colPosition = game.entities.get(col, "position");
-      colPosition.x = getTileX(x) - (tilePadding / 2);
-      colPosition.y = gridPos.y + gridPadding - (tilePadding / 2);
+      colPosition.x = getTileX(x) - (grid.tilePadding / 2);
+      colPosition.y = gridPos.y + grid.gridPadding - (grid.tilePadding / 2);
 
-      makeTile(game, grid[y][x], getTileX(x), getTileY(y), row, rowPosition.x, col, colPosition.y);
+      makeTile(game, grid.get(x, y), getTileX(x), getTileY(y), row, rowPosition.x, col, colPosition.y);
     }
   }
-  for (x = 0; x < gridWidth; x++) {
+  for (x = 0; x < grid.gridWidth; x++) {
     col = cols[x];
     colPosition = game.entities.get(col, "position");
-    for (y = -1; y > -1 - gridHeight; y--) {
-      makeTile(game, grid[gridHeight + y][x], getTileX(x), getTileY(y), col, colPosition.x, col, colPosition.y);
-      makeTile(game, grid[-1 - y][x], getTileX(x), getTileY(gridHeight - 1 - y), col, colPosition.x, col, colPosition.y);
+    for (y = -1; y > -1 - grid.gridHeight; y--) {
+      makeTile(game, grid.get(x, grid.gridHeight + y), getTileX(x), getTileY(y), col, colPosition.x, col, colPosition.y);
+      makeTile(game, grid.get(x, -1 - y), getTileX(x), getTileY(grid.gridHeight - 1 - y), col, colPosition.x, col, colPosition.y);
     }
   }
-  for (y = 0; y < gridHeight; y++) {
+  for (y = 0; y < grid.gridHeight; y++) {
     row = rows[y];
     rowPosition = game.entities.get(row, "position");
-    for (x = -1; x > -1 - gridWidth; x--) {
-      makeTile(game, grid[y][gridWidth + x], getTileX(x), getTileY(y), row, rowPosition.x, row, rowPosition.y);
-      makeTile(game, grid[y][-1 - x], getTileX(gridWidth - 1 - x), getTileY(y), row, rowPosition.x, row, rowPosition.y);
+    for (x = -1; x > -1 - grid.gridWidth; x--) {
+      makeTile(game, grid.get(grid.gridWidth + x, y), getTileX(x), getTileY(y), row, rowPosition.x, row, rowPosition.y);
+      makeTile(game, grid.get(-1 - x, y), getTileX(grid.gridWidth - 1 - x), getTileY(y), row, rowPosition.x, row, rowPosition.y);
     }
   }
 };
