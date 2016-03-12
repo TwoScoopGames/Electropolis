@@ -21,12 +21,9 @@ var grid = require("../grid");
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
-<<<<<<< Updated upstream
-=======
 
   game.instantiatePrefab("powerLines");
 
->>>>>>> Stashed changes
   generatePowerThresholds(game);
   grid.create();
   grid.createEntities(game);
