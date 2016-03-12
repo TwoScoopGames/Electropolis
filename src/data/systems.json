@@ -109,6 +109,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/swap-image-on-power-threshold",
+  "scenes": [
+   "title", "main", "credits"
+  ]
+ },
+  {
    "name": "./systems/simulation/windows95",
    "scenes": [
     "title", "main", "credits"

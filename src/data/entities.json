@@ -1707,7 +1707,27 @@
       "speed": 1,
       "name": "lights-on"
     }
-
+},
+{
+  "id": 197,
+  "name": "billboard",
+  "position": {
+    "x": 0,
+    "y": 1600,
+    "z": 1
+  },
+  "size":{
+    "width": 143,
+    "height": 208
+  },
+  "image": {
+    "name": "billboard1.png"
+  },
+  "swapImageOnPowerThreshold":{
+    "first": "billboard1.png",
+    "second": "billboard2.png",
+    "third": "billboard3.png"
+  }
 },
     {
     "id": 200,
