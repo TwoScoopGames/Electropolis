@@ -21,12 +21,20 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         && my >= position.y
         && my < position.y + size.height;
 
+    // FIXME: this is bullshit
+    var gridPosition = game.entities.get(2, "position");
+    var gridSize = game.entities.get(2, "size");
+    var insideGrid = mx >= gridPosition.x
+      && mx < gridPosition.x + gridSize.width
+      && my >= gridPosition.y
+      && my < gridPosition.y + gridSize.height;
+
     if (game.inputs.buttonPressed("action") && inside) {
       drag.startX = position.x;
       drag.startY = position.y;
       drag.offsetX = position.x - mx;
       drag.offsetY = position.y - my;
-    } else if (game.inputs.button("action") && drag.offsetX !== undefined && drag.offsetY !== undefined) {
+    } else if (game.inputs.button("action") && drag.offsetX !== undefined && drag.offsetY !== undefined && insideGrid) {
       var dx = Math.abs(mx + drag.offsetX - drag.startX);
       var dy = Math.abs(my + drag.offsetY - drag.startY);
       if (dx < dy && dx > 30) {

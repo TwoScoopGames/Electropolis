@@ -123,6 +123,10 @@
 				"y": 250,
 				"z": -1
 			},
+			"size": {
+				"width": 1080,
+				"height": 1080
+			},
 			"image": {
 				"name": "grid.png"
 			}
