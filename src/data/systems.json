@@ -61,6 +61,12 @@
    ]
   },
   {
+    "name": "./systems/simulation/match-parent-right",
+    "scenes": [
+    "title", "main", "credits"
+    ]
+  },
+  {
    "name": "./systems/simulation/fade-outside",
    "scenes": [
     "title", "main", "credits"
@@ -103,11 +109,23 @@
    ]
   },
   {
+    "name": "./systems/simulation/clean-up",
+    "scenes": [
+      "main"
+    ]
+  },
+  {
    "name": "./systems/simulation/sample-simulation-system",
    "scenes": [
     "title", "main", "credits"
    ]
   },
+  {
+   "name": "./systems/simulation/swap-image-on-power-threshold",
+  "scenes": [
+   "title", "main", "credits"
+  ]
+ },
   {
    "name": "./systems/simulation/windows95",
    "scenes": [
@@ -152,7 +170,6 @@
     "title", "main", "credits"
    ]
   },
-
   {
     "name": "./systems/renderer/draw-lightning",
     "scenes": [

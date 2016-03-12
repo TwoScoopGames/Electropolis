@@ -6,13 +6,14 @@ function shuffle(o) {
 }
 
 function generatePowerThresholds(game) {
-  var entitiesWithPowerThreshold = game.entities.find("powerThreshold");
-  var newArray = [];
-  console.log("There should be " + entitiesWithPowerThreshold.length + " Power Threshold levels.");
+  var entitiesWithPowerThreshold = shuffle(game.entities.find("powerThreshold"));
+
+  var step = 100 / entitiesWithPowerThreshold.length;
+  var powerLevel = step;
   for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
-    newArray.push(i);
+    game.entities.set(entitiesWithPowerThreshold[i], "powerThreshold", powerLevel);
+    powerLevel += step;
   }
-  return newArray;
 }
 
 var grid = require("../grid");
@@ -45,12 +46,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
 
-  var powerThresholds = shuffle(generatePowerThresholds(game));
-  console.log(powerThresholds);
-  var entitiesWithPowerThreshold = game.entities.find("powerThreshold");
-  for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
-    game.entities.set(entitiesWithPowerThreshold[i], "powerThreshold", powerThresholds[i]);
-  }
+  generatePowerThresholds(game);
 
   var cols = [];
   var rows = [];

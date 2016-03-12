@@ -83,7 +83,67 @@
 			"pressed-image":{
 				"name": "button-sound-off.png"
 			}
-		}
+		},
+    {
+      "id": 201,
+      "name": "cloudSpawner1",
+      "timers" : {
+        "spawnCloud" : {
+          "running" : true,
+          "time" : 10000,
+          "max" : 10000,
+          "script" : "./scripts/spawn-cloud"
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0
+      },
+      "matchParentRight" : {
+        "id" : 0,
+        "offset" : 0
+      }
+    },
+    {
+      "id": 202,
+      "name": "cloudSpawner2",
+      "timers" : {
+        "spawnCloud" : {
+          "running" : true,
+          "time" : 10000,
+          "max" : 10000,
+          "script" : "./scripts/spawn-cloud"
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 400
+      },
+      "matchParentRight" : {
+        "id" : 0,
+        "offset" : 0
+      }
+    },
+    {
+      "id": 203,
+      "name": "cloudSpawner3",
+      "timers" : {
+        "spawnCloud" : {
+          "running" : true,
+          "time" : 8000,
+          "max" : 8000,
+          "script" : "./scripts/spawn-cloud"
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 800
+      },
+      "matchParentRight" : {
+        "id" : 0,
+        "offset" : 0
+      }
+    }
 	],
 	"main": [
 		{
@@ -179,7 +239,15 @@
       },
 			"image": {
 				"name": "town.png"
-			}
+			},
+      "timers":{
+        "temp":{
+        "running": true,
+        "time": 0,
+        "max": 100,
+        "script": "./scripts/decrement-power-level"
+       }
+     }
     },
     {
 			"id": 90,
@@ -1707,15 +1775,96 @@
       "speed": 1,
       "name": "lights-on"
     }
-
 },
-    {
-    "id": 200,
-    "name": "lightning",
-    "triggerLightning" : {
-      "input" : "action"
-    }
+{
+  "id": 197,
+  "name": "billboard",
+  "position": {
+    "x": 0,
+    "y": 1600,
+    "z": 1
+  },
+  "size":{
+    "width": 143,
+    "height": 208
+  },
+  "image": {
+    "name": "billboard1.png"
+  },
+  "swapImageOnPowerThreshold":{
+    "first": "billboard1.png",
+    "second": "billboard2.png",
+    "third": "billboard3.png"
   }
+},
+{
+  "id": 200,
+  "name": "lightning",
+  "triggerLightning" : {
+    "input" : "action"
+    }
+},
+{
+  "id": 201,
+  "name": "cloudSpawner1",
+  "timers" : {
+    "spawnCloud" : {
+      "running" : true,
+      "time" : 10000,
+      "max" : 10000,
+      "script" : "./scripts/spawn-cloud"
+    }
+  },
+  "position" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "matchParentRight" : {
+    "id" : 0,
+    "offset" : 0
+  }
+},
+{
+  "id": 202,
+  "name": "cloudSpawner2",
+  "timers" : {
+    "spawnCloud" : {
+      "running" : true,
+      "time" : 10000,
+      "max" : 10000,
+      "script" : "./scripts/spawn-cloud"
+    }
+  },
+  "position" : {
+    "x" : 0,
+    "y" : 400
+  },
+  "matchParentRight" : {
+    "id" : 0,
+    "offset" : 0
+  }
+},
+{
+  "id": 203,
+  "name": "cloudSpawner3",
+  "timers" : {
+    "spawnCloud" : {
+      "running" : true,
+      "time" : 8000,
+      "max" : 8000,
+      "script" : "./scripts/spawn-cloud"
+    }
+  },
+  "position" : {
+    "x" : 0,
+    "y" : 800
+  },
+  "matchParentRight" : {
+    "id" : 0,
+    "offset" : 0
+  }
+}
+
 	],
   "credits": [
     {
@@ -1880,6 +2029,66 @@
       },
       "link":{
         "url": "http://twoscoopgames.com"
+      }
+    },
+    {
+      "id": 201,
+      "name": "cloudSpawner1",
+      "timers" : {
+        "spawnCloud" : {
+          "running" : true,
+          "time" : 10000,
+          "max" : 10000,
+          "script" : "./scripts/spawn-cloud"
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0
+      },
+      "matchParentRight" : {
+        "id" : 0,
+        "offset" : 0
+      }
+    },
+    {
+      "id": 202,
+      "name": "cloudSpawner2",
+      "timers" : {
+        "spawnCloud" : {
+          "running" : true,
+          "time" : 10000,
+          "max" : 10000,
+          "script" : "./scripts/spawn-cloud"
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 400
+      },
+      "matchParentRight" : {
+        "id" : 0,
+        "offset" : 0
+      }
+    },
+    {
+      "id": 203,
+      "name": "cloudSpawner3",
+      "timers" : {
+        "spawnCloud" : {
+          "running" : true,
+          "time" : 8000,
+          "max" : 8000,
+          "script" : "./scripts/spawn-cloud"
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 800
+      },
+      "matchParentRight" : {
+        "id" : 0,
+        "offset" : 0
       }
     }
   ]
