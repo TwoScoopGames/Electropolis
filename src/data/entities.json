@@ -84,24 +84,6 @@
       }
     },
     {
-      "id": 3,
-      "name": "mute-button",
-      "position": {
-        "x": 892,
-        "y": 20
-      },
-      "size": {
-        "width": 168,
-        "height": 181
-      },
-      "image":{
-        "name": "button-sound-on.png"
-      },
-      "pressed-image":{
-        "name": "button-sound-off.png"
-      }
-    },
-    {
       "id": 201,
       "name": "cloudSpawner1",
       "timers" : {
@@ -241,24 +223,6 @@
       },
       "image": {
         "name": "cloud1.png"
-      }
-    },
-    {
-      "id": 4,
-      "name": "pause-button",
-      "position": {
-        "x": 892,
-        "y": 20
-      },
-      "size": {
-        "width": 168,
-        "height": 181
-      },
-      "image":{
-        "name": "button-pause-up.png"
-      },
-      "pressed-image":{
-        "name": "button-pause-down.png"
       }
     },
     {
