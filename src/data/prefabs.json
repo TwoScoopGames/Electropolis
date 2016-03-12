@@ -1,6 +1,7 @@
 {
   "symbolCircle": {
     "name": "symbolCircle",
+    "tile": true,
     "position": {
      "x": 0,
      "y": 0
@@ -19,6 +20,7 @@
   },
   "symbolSquare": {
     "name": "symbolSquare",
+    "tile": true,
     "position": {
      "x": 0,
      "y": 0
@@ -37,6 +39,7 @@
   },
   "symbolStar": {
     "name": "symbolStar",
+    "tile": true,
     "position": {
      "x": 0,
      "y": 0
@@ -55,6 +58,7 @@
   },
   "symbolTriangle": {
     "name": "symbolTriangle",
+    "tile": true,
     "position": {
      "x": 0,
      "y": 0
