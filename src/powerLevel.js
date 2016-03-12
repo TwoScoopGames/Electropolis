@@ -7,6 +7,6 @@ module.exports = {
   },
   "set": function(number) {
     powerLevel = number;
-    console.log("power level", number);
+    // console.log("power level", number);
   }
 };
