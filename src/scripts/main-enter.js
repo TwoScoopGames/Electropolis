@@ -23,6 +23,9 @@ function makeTile(game, prefabs, x, y, row, rowX, column, columnY) {
       "offset": y - columnY
     });
   }
+  game.entities.set(tile, "fadeOutside", {
+    "id": 2
+  });
   return tile;
 }
 
