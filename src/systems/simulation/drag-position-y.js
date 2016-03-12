@@ -50,11 +50,13 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       var column = game.entities.get(entity, "column");
       console.log("column", column, "moved", tilesMoved);
       grid.rotateColumn(column, tilesMoved);
+      grid.destroyEntities(game);
+      grid.createEntities(game);
 
-      position.x = drag.startX;
-      position.y = drag.startY;
-      delete drag.offsetX;
-      delete drag.offsetY;
+      // position.x = drag.startX;
+      // position.y = drag.startY;
+      // delete drag.offsetX;
+      // delete drag.offsetY;
     }
   }, "drag-position-y");
 };

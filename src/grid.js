@@ -139,7 +139,7 @@ function rotateColumn(column, rowsMoved) {
     newGrid.push([]);
     for (var x = 0; x < api.gridWidth; x++) {
       if (x === column) {
-        newGrid[y][x] = grid[wrapArrayIndex(y + rowsMoved, api.gridHeight)][x];
+        newGrid[y][x] = grid[wrapArrayIndex(y - rowsMoved, api.gridHeight)][x];
       } else {
         newGrid[y][x] = grid[y][x];
       }
@@ -226,8 +226,21 @@ function makeTile(game, prefab, x, y, row, rowX, column, columnY) {
   return tile;
 }
 
+function destroyEntities(game) {
+  game.entities.find("tile").slice().forEach(function(id) {
+    game.entities.destroy(id);
+  });
+  game.entities.find("row").slice().forEach(function(id) {
+    game.entities.destroy(id);
+  });
+  game.entities.find("column").slice().forEach(function(id) {
+    game.entities.destroy(id);
+  });
+}
+
 api.create = create;
 api.createEntities = createEntities;
+api.destroyEntities = destroyEntities;
 api.get = get;
 api.matches = matches;
 api.rotateColumn = rotateColumn;
