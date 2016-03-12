@@ -16,7 +16,6 @@ var offset = function(point1, point2, range) {
   var y = point1.y + radius * Math.sin(angle);
 
   return { "x": x, "y": y };
-
 };
 
 var distance = function(start, end) {
@@ -26,7 +25,6 @@ var distance = function(start, end) {
 var getLightningPoints = function(start, end) {
   if (distance(start,end) < 30) {
     return [start, end];
-
   }
 
   var m = offset(midpoint(start, end), end, 40);
@@ -35,23 +33,30 @@ var getLightningPoints = function(start, end) {
   return l1.concat(l2);
 };
 
+function spawnLightning(x1, y1, x2, y2, game, forkChance) {
+  var points = getLightningPoints({ "x": x1, "y": y1 }, { "x": x2, "y": y2 });
+
+  var entity = game.entities.create();
+  game.entities.set(entity, "lightning", {
+    "points": points
+  });
+
+  if (Math.random() < forkChance) {
+    var forkStart = points[Math.floor(Math.random() * points.length)];
+    var forkEnd = offset(points[points.length - 1], points[0], 180);
+    spawnLightning(forkStart.x, forkStart.y, forkEnd.x, forkEnd.y, game, forkChance);
+  }
+}
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
     var input = game.entities.get(entity, "triggerLightning").input;
     if (game.inputs.buttonPressed(input)) {
-      //var points = getLightningPoints({ "x": Math.random() * 1080, "y": Math.random() * 1080 },{ "x": Math.random() * 1080, "y": Math.random() * 1080 });
       var mouse = getMousePos(game);
-      var initial = getLightningPoints({ "x": 0, "y": 0 }, { "x": mouse.x, "y": mouse.y });
-      var forkStart = initial[Math.floor(Math.random() * initial.length)];
-      var forkEnd = offset(initial[initial.length - 1], initial[0], 180);
-      var forkpoints = getLightningPoints({ "x": forkStart.x, "y": forkStart.y }, { "x": forkEnd.x, "y": forkEnd.y });
-      var points = [initial, forkpoints];
-
-      var lightningEntity = game.entities.create();
-      game.entities.set(lightningEntity, "lightning", {
-        "points": points
-      });
+      spawnLightning(0, 0, mouse.x, mouse.y, game, 0.7);
+      spawnLightning(1080, 0, mouse.x, mouse.y, game, 0.7);
+      spawnLightning(0, 1080, mouse.x, mouse.y, game, 0.7);
+      spawnLightning(1080, 1080, mouse.x, mouse.y, game, 0.7);
     }
   }, "triggerLightning");
 };
