@@ -33,5 +33,4 @@ module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
   cloudPosition.x = position.x;
   cloudPosition.y = position.y;
 
-
 };

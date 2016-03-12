@@ -37,8 +37,8 @@
 				"y": 250
 			},
 			"size": {
-				"width": 1020,
-				"height": 503
+				"width": 1801,
+				"height": 1781
 			},
       "matchCenterX": {
 				"id": 1
@@ -46,6 +46,23 @@
 			"image":{
 				"name": "logo.png"
 			}
+		},
+    {
+			"id": 100,
+			"name": "background-thing",
+			"position": {
+				"x": 0,
+				"y": 1697
+			},
+			"size": {
+				"width": 5000,
+				"height": 323
+			},
+      "matchCenterX": {
+				"id": 1
+			},
+			"fillColor": "#76894e"
+
 		},
 		{
 			"id": 2,

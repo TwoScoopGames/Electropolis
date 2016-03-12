@@ -2,10 +2,25 @@
 
 var grid = require("../../grid");
 var getMousePos = require("../../get-mouse-pos");
+var spawnLightning = require("../../spawn-lightning");
+
+function zapMatches(game, matches) {
+  for (var i = 0; i < matches.length; i++) {
+    var x1 = grid.getTileX(game, matches[i][0].x) + grid.tileSize / 2;
+    var y1 = grid.getTileY(game, matches[i][0].y) + grid.tileSize / 2;
+    var x2 = grid.getTileX(game, matches[i][matches[i].length - 1].x) + grid.tileSize / 2;
+    var y2 = grid.getTileY(game, matches[i][matches[i].length - 1].y) + grid.tileSize / 2;
+    spawnLightning(x1, y1, x2, y2, game, 0);
+
+    var powerLines = game.instantiatePrefab("powerLines");
+    var points = game.entities.get(powerLines, "lightningPoints");
+    points.unshift({ "x": x1, "y": y1 });
+  }
+}
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("drag-position-x", ["dragX", "position", "size"]);
-  ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function dragPositionX(entity, elapsed) { // eslint-disable-line no-unused-vars
     if (game.entities.find("intro").length > 0 || game.entities.find("outro").length > 0) {
       return;
     }
@@ -50,15 +65,19 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       if (Math.abs(tilesMoved) !== 0) {
         var row = game.entities.get(entity, "row");
         console.log("row", row, "moved", tilesMoved);
-        grid.rotateRow(row, tilesMoved);
-        grid.destroyEntities(game);
-        grid.createEntities(game);
+        var matches = grid.rotateRow(row, tilesMoved);
+        if (matches.length > 0) {
+          grid.destroyEntities(game);
+          grid.createEntities(game);
+          zapMatches(game, matches);
+          return;
+        }
       }
 
-      // position.x = drag.startX;
-      // position.y = drag.startY;
-      // delete drag.offsetX;
-      // delete drag.offsetY;
+      position.x = drag.startX;
+      position.y = drag.startY;
+      delete drag.offsetX;
+      delete drag.offsetY;
     }
   }, "drag-position-x");
 };

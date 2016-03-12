@@ -3,12 +3,19 @@
     "name": "symbolCircle",
     "tile": true,
     "position": {
-     "x": 0,
-     "y": 0
+      "x": 0,
+      "y": 0
     },
     "size": {
-     "width": 122,
-     "height": 122
+      "width": 122,
+      "height": 122
+    },
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "symbol-cir-f13"
     },
     "image": {
       "name": "symbol-cir.png",
@@ -22,12 +29,19 @@
     "name": "symbolSquare",
     "tile": true,
     "position": {
-     "x": 0,
-     "y": 0
+      "x": 0,
+      "y": 0
     },
     "size": {
-     "width": 122,
-     "height": 122
+      "width": 122,
+      "height": 122
+    },
+    "animation": {
+      "time": 0,
+      "frame": 12,
+      "loop": true,
+      "speed": 1,
+      "name": "symbol-sqa-f13"
     },
     "image": {
       "name": "symbol-sqa.png",
@@ -41,12 +55,19 @@
     "name": "symbolStar",
     "tile": true,
     "position": {
-     "x": 0,
-     "y": 0
+      "x": 0,
+      "y": 0
     },
     "size": {
-     "width": 122,
-     "height": 122
+      "width": 122,
+      "height": 122
+    },
+    "animation": {
+      "time": 0,
+      "frame": 5,
+      "loop": true,
+      "speed": 1,
+      "name": "symbol-sta-f13"
     },
     "image": {
       "name": "symbol-sta.png",
@@ -60,12 +81,19 @@
     "name": "symbolTriangle",
     "tile": true,
     "position": {
-     "x": 0,
-     "y": 0
+      "x": 0,
+      "y": 0
     },
     "size": {
-     "width": 122,
-     "height": 122
+      "width": 122,
+      "height": 122
+    },
+    "animation": {
+      "time": 0,
+      "frame": 7,
+      "loop": true,
+      "speed": 1,
+      "name": "symbol-tri-f13"
     },
     "image": {
       "name": "symbol-tri.png",
@@ -160,5 +188,29 @@
       "name" : "cloud3.png"
     },
     "cleanUp" : true
+  },
+  "powerLines": {
+    "name": "powerLines",
+    "lightningPoints" : [
+      { "x": 815, "y": 1400 },
+      { "x": 674, "y": 1452 },
+      { "x": 710, "y": 1506 },
+      { "x": 738, "y": 1597 },
+      { "x": 743, "y": 1633 },
+      { "x": 681, "y": 1687 },
+      { "x": 418, "y": 1673 },
+      { "x": 353, "y": 1673 },
+      { "x": 259, "y": 1738 },
+      { "x": 191, "y": 1741 },
+      { "x": -40, "y": 1980 }
+    ],
+    "timers" : {
+      "chainReaction" : {
+        "running" : true,
+        "time" : 100,
+        "max" : 100,
+        "script" : "./scripts/chain-reaction"
+      }
+    }
   }
 }
