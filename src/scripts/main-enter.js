@@ -22,8 +22,6 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
 
-  game.instantiatePrefab("powerLines");
-
   generatePowerThresholds(game);
   grid.create();
   grid.createEntities(game);

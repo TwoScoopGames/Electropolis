@@ -11,6 +11,10 @@ function zapMatches(game, matches) {
     var x2 = grid.getTileX(game, matches[i][matches[i].length - 1].x) + grid.tileSize / 2;
     var y2 = grid.getTileY(game, matches[i][matches[i].length - 1].y) + grid.tileSize / 2;
     spawnLightning(x1, y1, x2, y2, game, 0);
+
+    var powerLines = game.instantiatePrefab("powerLines");
+    var points = game.entities.get(powerLines, "lightningPoints");
+    points.unshift({ "x": x1, "y": y1 });
   }
 }
 
