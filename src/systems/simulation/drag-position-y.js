@@ -47,11 +47,13 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       }
     } else if (game.inputs.buttonReleased("action") && drag.offsetX !== undefined && drag.offsetY !== undefined) {
       var tilesMoved = Math.round((position.y - drag.startY) / (grid.tileSize + grid.tilePadding));
-      var column = game.entities.get(entity, "column");
-      console.log("column", column, "moved", tilesMoved);
-      grid.rotateColumn(column, tilesMoved);
-      grid.destroyEntities(game);
-      grid.createEntities(game);
+      if (Math.abs(tilesMoved) !== 0) {
+        var column = game.entities.get(entity, "column");
+        console.log("column", column, "moved", tilesMoved);
+        grid.rotateColumn(column, tilesMoved);
+        grid.destroyEntities(game);
+        grid.createEntities(game);
+      }
 
       // position.x = drag.startX;
       // position.y = drag.startY;

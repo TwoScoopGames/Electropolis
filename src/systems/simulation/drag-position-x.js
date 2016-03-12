@@ -1,5 +1,6 @@
 "use strict";
 
+var grid = require("../../grid");
 var getMousePos = require("../../get-mouse-pos");
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
@@ -45,10 +46,19 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         // position.y = mouse.y + drag.offsetY;
       }
     } else if (game.inputs.buttonReleased("action") && drag.offsetX !== undefined && drag.offsetY !== undefined) {
-      position.x = drag.startX;
-      position.y = drag.startY;
-      delete drag.offsetX;
-      delete drag.offsetY;
+      var tilesMoved = Math.round((position.x - drag.startX) / (grid.tileSize + grid.tilePadding));
+      if (Math.abs(tilesMoved) !== 0) {
+        var row = game.entities.get(entity, "row");
+        console.log("row", row, "moved", tilesMoved);
+        grid.rotateRow(row, tilesMoved);
+        grid.destroyEntities(game);
+        grid.createEntities(game);
+      }
+
+      // position.x = drag.startX;
+      // position.y = drag.startY;
+      // delete drag.offsetX;
+      // delete drag.offsetY;
     }
   }, "drag-position-x");
 };

@@ -148,6 +148,22 @@ function rotateColumn(column, rowsMoved) {
   grid = newGrid;
 }
 
+function rotateRow(row, columnsMoved) {
+  var newGrid = [];
+
+  for (var y = 0; y < api.gridHeight; y++) {
+    newGrid.push([]);
+    for (var x = 0; x < api.gridWidth; x++) {
+      if (y === row) {
+        newGrid[y][x] = grid[y][wrapArrayIndex(x - columnsMoved, api.gridWidth)];
+      } else {
+        newGrid[y][x] = grid[y][x];
+      }
+    }
+  }
+  grid = newGrid;
+}
+
 function createEntities(game) {
   var cols = [];
   var rows = [];
@@ -244,4 +260,5 @@ api.destroyEntities = destroyEntities;
 api.get = get;
 api.matches = matches;
 api.rotateColumn = rotateColumn;
+api.rotateRow = rotateRow;
 module.exports = api;
