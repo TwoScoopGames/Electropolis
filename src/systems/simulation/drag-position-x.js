@@ -3,6 +3,7 @@
 var grid = require("../../grid");
 var getMousePos = require("../../get-mouse-pos");
 var spawnLightning = require("../../spawn-lightning");
+var powerLevel = require("../../powerLevel");
 
 function zapMatches(game, matches) {
   for (var i = 0; i < matches.length; i++) {
@@ -11,6 +12,10 @@ function zapMatches(game, matches) {
     var x2 = grid.getTileX(game, matches[i][matches[i].length - 1].x) + grid.tileSize / 2;
     var y2 = grid.getTileY(game, matches[i][matches[i].length - 1].y) + grid.tileSize / 2;
     spawnLightning(x1, y1, x2, y2, game, 0);
+
+    var pl = powerLevel.get();
+    pl += matches[i].length;
+    powerLevel.set(pl);
 
     var powerLines = game.instantiatePrefab("powerLines");
     var points = game.entities.get(powerLines, "lightningPoints");
