@@ -1,17 +1,14 @@
 "use strict";
 
-// function chainReaction(game, array, start) {
-//   for (var i = 0; i < array.length; i++) {
-//     if (i === array.length) {
-//       return;
-//     }
-//     if (i === 0) {
-//       spawnLightning(start.x, start.y, array[i].x, array[i].y, game, 0);
-//     } else {
-//       spawnLightning(array[i - 1].x, array[i - 1].y, array[i].x, array[i].y, game, 0);
-//     }
-//   }
-// }
+var spawnLightning = require("../spawn-lightning");
 
 module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
+  var lightningPoints = game.entities.get(entity, "lightningPoints");
+  var p1 = lightningPoints.shift();
+  spawnLightning(p1.x, p1.y, lightningPoints[0].x, lightningPoints[0].y, game, 0);
+
+  if (lightningPoints.length > 1) {
+    var timers = game.entities.get(entity, "timers");
+    timers.chainReaction.running = true;
+  }
 };
