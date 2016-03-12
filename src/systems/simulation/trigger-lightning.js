@@ -52,6 +52,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
     var input = game.entities.get(entity, "triggerLightning").input;
     if (game.inputs.buttonPressed(input)) {
+      game.sounds.play("Thunder.mp3");
       var mouse = getMousePos(game);
       spawnLightning(0, 0, mouse.x, mouse.y, game, 0.7);
       spawnLightning(1080, 0, mouse.x, mouse.y, game, 0.7);

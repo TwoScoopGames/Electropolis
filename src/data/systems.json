@@ -61,6 +61,12 @@
    ]
   },
   {
+    "name": "./systems/simulation/match-parent-right",
+    "scenes": [
+    "main"
+    ]
+  },
+  {
    "name": "./systems/simulation/fade-outside",
    "scenes": [
     "title", "main", "credits"
@@ -101,6 +107,12 @@
    "scenes": [
     "title", "main", "credits"
    ]
+  },
+  {
+    "name": "./systems/simulation/clean-up",
+    "scenes": [
+      "main"
+    ]
   },
   {
    "name": "./systems/simulation/sample-simulation-system",
@@ -149,7 +161,7 @@
   {
    "name": "splat-ecs/lib/systems/draw-rectangles",
    "scenes": [
-    "title", "main", "credits"
+    "title", "credits"
    ]
   },
   {
