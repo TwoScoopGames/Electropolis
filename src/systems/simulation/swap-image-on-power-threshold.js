@@ -10,11 +10,13 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       game.entities.set(entity, "image",{
         "name": swapImageOnPowerThreshold.first
       });
-    } else if (powerLevel.get() >= 33) {
+    }
+    if (powerLevel.get() >= 33) {
       game.entities.set(entity, "image",{
         "name": swapImageOnPowerThreshold.second
       });
-    } else if (powerLevel.get() >= 66) {
+    }
+    if (powerLevel.get() >= 66) {
       game.entities.set(entity, "image",{
         "name": swapImageOnPowerThreshold.third
       });

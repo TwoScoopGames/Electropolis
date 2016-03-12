@@ -33,7 +33,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       spawnLightning(0, 1080, mouse.x, mouse.y, game, 0.7);
       spawnLightning(1080, 1080, mouse.x, mouse.y, game, 0.7);
 
-
     }
   }, "triggerLightning");
 };

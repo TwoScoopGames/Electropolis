@@ -122,6 +122,25 @@
       }
     },
     {
+			"id": 250,
+			"name": "credits-button",
+			"change-scene" : "main",
+			"position": {
+				"x": 236,
+				"y": 1534
+			},
+			"size": {
+				"width": 588,
+				"height": 183
+			},
+			"image":{
+				"name": "button-credits-up.png"
+			},
+			"pressed-image":{
+				"name": "button-credits-down.png"
+			}
+		},
+    {
       "id": 202,
       "name": "cloudSpawner2",
       "timers" : {
