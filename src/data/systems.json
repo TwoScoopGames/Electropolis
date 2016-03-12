@@ -121,6 +121,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/windows95",
+   "scenes": [
+    "title", "main", "credits"
+   ]
+  },
+  {
    "name": "./systems/simulation/scene-change-button",
    "scenes": [
     "title", "main", "credits"
@@ -156,12 +162,6 @@
    "name": "./systems/renderer/draw-image",
    "scenes": [
     "title", "main", "credits"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/draw-rectangles",
-   "scenes": [
-    "title", "credits"
    ]
   },
   {

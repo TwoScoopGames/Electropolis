@@ -1,2 +1,15 @@
 {
+  "lights-on": [{
+      "filmstripFrames": 10,
+      "time": 200,
+      "properties": {
+          "image": {
+              "name": "lights-on.png",
+              "sourceX": 0,
+              "sourceY": 0,
+              "sourceWidth": 10,
+              "sourceHeight": 1
+          }
+      }
+	}]
 }

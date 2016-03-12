@@ -1,5 +1,20 @@
 "use strict";
 
+function shuffle(o) {
+  for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
+}
+
+function generatePowerThresholds(game) {
+  var entitiesWithPowerThreshold = game.entities.find("powerThreshold");
+  var newArray = [];
+  console.log("There should be " + entitiesWithPowerThreshold.length + " Power Threshold levels.");
+  for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
+    newArray.push(i);
+  }
+  return newArray;
+}
+
 var grid = require("../grid");
 grid.create();
 
@@ -29,6 +44,13 @@ function makeTile(game, prefabs, x, y, row, rowX, column, columnY) {
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
+
+  var powerThresholds = shuffle(generatePowerThresholds(game));
+  console.log(powerThresholds);
+  var entitiesWithPowerThreshold = game.entities.find("powerThreshold");
+  for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
+    game.entities.set(entitiesWithPowerThreshold[i], "powerThreshold", powerThresholds[i]);
+  }
 
   var cols = [];
   var rows = [];
