@@ -63,7 +63,7 @@
   {
     "name": "./systems/simulation/match-parent-right",
     "scenes": [
-    "main"
+    "title", "main", "credits"
     ]
   },
   {
