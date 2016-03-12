@@ -8,7 +8,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var animation = game.entities.get(entity, "animation");
     animation.loop = false;
     if (powerThreshold > powerLevel.get()) {
-      console.log("drop");
       animation.frame = 0;
       //animation.speed = 0;
     } else {

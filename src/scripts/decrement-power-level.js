@@ -12,5 +12,4 @@ module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
   }
   var timers = game.entities.get(entity, "timers");
   timers.temp.running = true;
-  console.log(currentPowerLevel);
 };
