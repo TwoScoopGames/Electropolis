@@ -37,6 +37,18 @@ function get(x, y) {
   return grid[y][x];
 }
 
+function createMatchColumn(x, y1, y2, tile) {
+  var match = [];
+  for (var y = y1; y < y2; y++) {
+    match.push({
+      x: x,
+      y: y,
+      tile: tile
+    });
+  }
+  return match;
+}
+
 function createMatchRow(x1, x2, y, tile) {
   var match = [];
   for (var x = x1; x < x2; x++) {
@@ -53,10 +65,11 @@ var requiredMatchLength = 3;
 
 function matches() {
   var matches = [];
-  for (var y = 0; y < grid.length; y++) {
-    var runStart = 0;
-    var runValue = grid[y][0];
-    for (var x = 1; x < grid[y].length; x++) {
+  var x, y, runStart, runValue;
+  for (y = 0; y < api.gridHeight; y++) {
+    runStart = 0;
+    runValue = grid[y][0];
+    for (x = 1; x < api.gridWidth; x++) {
       if (grid[y][x] === runValue) {
         continue;
       }
@@ -64,6 +77,20 @@ function matches() {
         matches.push(createMatchRow(runStart, x, y, runValue));
       }
       runStart = x;
+      runValue = grid[y][x];
+    }
+  }
+  for (x = 0; x < api.gridWidth; x++) {
+    runStart = 0;
+    runValue = grid[0][x];
+    for (y = 1; y < api.gridHeight; y++) {
+      if (grid[y][x] === runValue) {
+        continue;
+      }
+      if (y - runStart >= requiredMatchLength) {
+        matches.push(createMatchColumn(x, runStart, y, runValue));
+      }
+      runStart = y;
       runValue = grid[y][x];
     }
   }
