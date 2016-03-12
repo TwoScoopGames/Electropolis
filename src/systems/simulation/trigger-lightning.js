@@ -62,8 +62,8 @@ var lightningSounds = [
   "lightning7.wav",
   "lightning8.wav",
   "lightning9.wav",
-  "lightning10.wav",
-]
+  "lightning10.wav"
+];
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
