@@ -65,6 +65,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   var x, y, row, col;
   for (y = 0; y < grid.gridHeight; y++) {
     row = game.instantiatePrefab("row");
+    game.entities.set(row, "row", y);
     rows.push(row);
     var rowPosition = game.entities.get(row, "position");
     rowPosition.x = gridPos.x + grid.gridPadding - (grid.tilePadding / 2);
@@ -73,6 +74,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
     for (x = 0; x < grid.gridWidth; x++) {
       if (cols[x] === undefined) {
         cols[x] = game.instantiatePrefab("column");
+        game.entities.set(cols[x], "column", x);
       }
       col = cols[x];
       var colPosition = game.entities.get(col, "position");

@@ -122,7 +122,34 @@ function matches() {
   return matches;
 }
 
+function wrapArrayIndex(i, length) {
+  if (i < 0) {
+    return length + i;
+  } else if (i >= length) {
+    return i - length;
+  } else {
+    return i;
+  }
+}
+
+function rotateColumn(column, rowsMoved) {
+  var newGrid = [];
+
+  for (var y = 0; y < api.gridHeight; y++) {
+    newGrid.push([]);
+    for (var x = 0; x < api.gridWidth; x++) {
+      if (x === column) {
+        newGrid[y][x] = grid[wrapArrayIndex(y + rowsMoved, api.gridHeight)][x];
+      } else {
+        newGrid[y][x] = grid[y][x];
+      }
+    }
+  }
+  grid = newGrid;
+}
+
 api.create = create;
 api.get = get;
 api.matches = matches;
+api.rotateColumn = rotateColumn;
 module.exports = api;
