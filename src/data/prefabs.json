@@ -96,5 +96,65 @@
       "height": 149
     },
     "dragX": {}
+  },
+  "bg-cloud1": {
+    "name": "cloud1",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -3
+    },
+    "size": {
+      "width": 812,
+      "height": 619
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0
+    },
+    "image": {
+      "name" : "cloud1.png"
+    },
+    "cleanUp" : true
+  },
+  "bg-cloud2": {
+    "name": "cloud2",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -3
+    },
+    "size": {
+      "width": 812,
+      "height": 619
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0
+    },
+    "image": {
+      "name" : "cloud2.png"
+    },
+    "cleanUp" : true
+  },
+  "bg-cloud3": {
+    "name": "cloud3",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": -3
+    },
+    "size": {
+      "width": 1060,
+      "height": 720
+    },
+    "velocity": {
+      "x": 0,
+      "y": 0
+    },
+    "image": {
+      "name" : "cloud3.png"
+    },
+    "cleanUp" : true
   }
 }

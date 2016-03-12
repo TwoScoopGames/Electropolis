@@ -61,6 +61,12 @@
    ]
   },
   {
+    "name": "./systems/simulation/match-parent-right",
+    "scenes": [
+    "title", "main", "credits"
+    ]
+  },
+  {
    "name": "./systems/simulation/fade-outside",
    "scenes": [
     "title", "main", "credits"
@@ -101,6 +107,12 @@
    "scenes": [
     "title", "main", "credits"
    ]
+  },
+  {
+    "name": "./systems/simulation/clean-up",
+    "scenes": [
+      "main"
+    ]
   },
   {
    "name": "./systems/simulation/sample-simulation-system",
@@ -158,7 +170,6 @@
     "title", "main", "credits"
    ]
   },
-
   {
     "name": "./systems/renderer/draw-lightning",
     "scenes": [
