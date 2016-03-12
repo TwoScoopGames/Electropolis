@@ -1979,7 +1979,7 @@
     },
     {
       "id": 5,
-      "name": "lindartheband-link",
+      "name": "lindarthebard-link",
       "position": {
         "x": 0,
         "y": 665
@@ -1989,7 +1989,7 @@
         "height": 100
       },
       "link":{
-        "url": "https://twitter.com/lindartheband"
+        "url": "https://twitter.com/lindarthebard"
       }
     },
     {
