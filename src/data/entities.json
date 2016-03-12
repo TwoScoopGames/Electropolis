@@ -1,58 +1,331 @@
 {
- "main": [
-  {
-   "id": 0,
-   "name": "camera",
-   "camera": true,
-   "position": {
-    "x": 0,
-    "y": 0
-   },
-   "matchCanvasSize": true,
-   "matchCenterX": {
-     "id": 1
-   },
-   "matchCenterY": {
-     "id": 1
-   },
-   "fillColor": "#000000"
-  },
-  {
-   "id": 1,
-   "name": "viewport",
-   "position": {
-    "x": 0,
-    "y": 0
-   },
-   "size": {
-    "width": 1080,
-    "height": 1920
-   }
-  },
-  {
-   "id": 2,
-   "name": "grid",
-   "position": {
-    "x": 0,
-    "y": 250,
-    "z": -1
-   },
-   "image": {
-    "name": "grid.png"
-   }
-  },
-  {
-   "id": 3,
-   "name": "player",
-   "position": {
-    "x": 100,
-    "y": 100
-   },
-   "size": {
-    "width": 100,
-    "height": 100
-   },
-   "fillColor": "#00ff00"
-  }
- ]
+	"title": [
+		{
+			"id": 0,
+			"name": "camera",
+			"camera": true,
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"matchCanvasSize": true,
+			"matchCenterX": {
+				"id": 1
+			},
+			"matchCenterY": {
+				"id": 1
+			},
+			"fillColor": "#000000"
+		},
+		{
+			"id": 1,
+			"name": "viewport",
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"size": {
+				"width": 1080,
+				"height": 1920
+			}
+		},
+		{
+			"id": 2,
+			"name": "play-button",
+			"change-scene" : "main",
+			"position": {
+				"x": 236,
+				"y": 1334
+			},
+			"size": {
+				"width": 588,
+				"height": 183
+			},
+			"image":{
+				"name": "button-play-up.png"
+			},
+			"pressed-image":{
+				"name": "button-play-down.png"
+			}
+		},
+		{
+			"id": 3,
+			"name": "mute-button",
+			"position": {
+				"x": 20,
+				"y": 20
+			},
+			"size": {
+				"width": 168,
+				"height": 181
+			},
+			"image":{
+				"name": "button-sound-on.png"
+			},
+			"pressed-image":{
+				"name": "button-sound-off.png"
+			}
+		},
+    {
+			"id": 3,
+			"name": "mute-button",
+			"position": {
+				"x": 892,
+				"y": 20
+			},
+			"size": {
+				"width": 168,
+				"height": 181
+			},
+			"image":{
+				"name": "button-sound-on.png"
+			},
+			"pressed-image":{
+				"name": "button-sound-off.png"
+			}
+		}
+	],
+	"main": [
+		{
+			"id": 0,
+			"name": "camera",
+			"camera": true,
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"matchCanvasSize": true,
+			"matchCenterX": {
+				"id": 1
+			},
+			"matchCenterY": {
+				"id": 1
+			},
+			"fillColor": "#000000"
+		},
+		{
+			"id": 1,
+			"name": "viewport",
+			"position": {
+				"x": 0,
+				"y": 0
+			},
+			"size": {
+				"width": 1080,
+				"height": 1920
+			}
+		},
+		{
+			"id": 2,
+			"name": "grid",
+			"position": {
+				"x": 0,
+				"y": 250,
+				"z": -1
+			},
+			"image": {
+				"name": "grid.png"
+			}
+		},
+		{
+			"id": 3,
+			"name": "cloud1",
+			"position": {
+				"x": 0,
+				"y": 0,
+				"z": -2
+			},
+			"velocity": {
+				"x": -0.1,
+				"y": 0
+			},
+			"image": {
+				"name": "cloud1.png"
+			}
+		},
+    {
+			"id": 4,
+			"name": "pause-button",
+			"position": {
+				"x": 892,
+				"y": 20
+			},
+			"size": {
+				"width": 168,
+				"height": 181
+			},
+			"image":{
+				"name": "button-pause-up.png"
+			},
+			"pressed-image":{
+				"name": "button-pause-down.png"
+			}
+		}
+	],
+  "credits": [
+    {
+      "id": 0,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenterX": {
+        "id": 1
+      },
+      "matchCenterY": {
+        "id": 1
+      },
+      "fillColor": "#9F4C9D"
+    },
+    {
+      "id": 1,
+      "name": "viewport",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    {
+      "id": 2,
+      "name": "credits-text",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1080,
+        "height": 1920
+      },
+      "image":{
+        "name": "credits.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "trainjam-link",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1080,
+        "height": 400
+      },
+      "link":{
+        "url": "http://indietrainjam.com"
+      }
+    },
+    {
+      "id": 4,
+      "name": "alexbezuska-link",
+      "position": {
+        "x": 0,
+        "y": 565
+      },
+      "size": {
+        "width": 1080,
+        "height": 100
+      },
+      "link":{
+        "url": "https://twitter.com/alexbezuska"
+      }
+    },
+    {
+      "id": 5,
+      "name": "lindartheband-link",
+      "position": {
+        "x": 0,
+        "y": 665
+      },
+      "size": {
+        "width": 1080,
+        "height": 100
+      },
+      "link":{
+        "url": "https://twitter.com/lindartheband"
+      }
+    },
+    {
+      "id": 6,
+      "name": "ericlathrop-link",
+      "position": {
+        "x": 0,
+        "y": 760
+      },
+      "size": {
+        "width": 1080,
+        "height": 100
+      },
+      "link":{
+        "url": "https://twitter.com/ericlathrop"
+      }
+    },
+    {
+      "id": 6,
+      "name": "howdycara-link",
+      "position": {
+        "x": 0,
+        "y": 860
+      },
+      "size": {
+        "width": 1080,
+        "height": 100
+      },
+      "link":{
+        "url": "https://twitter.com/howdycara"
+      }
+    },
+    {
+      "id": 7,
+      "name": "lolo_r-link",
+      "position": {
+        "x": 0,
+        "y": 960
+      },
+      "size": {
+        "width": 1080,
+        "height": 100
+      },
+      "link":{
+        "url": "https://twitter.com/lolo_r"
+      }
+    },
+    {
+      "id": 8,
+      "name": "splatjs-link",
+      "position": {
+        "x": 0,
+        "y": 1180
+      },
+      "size": {
+        "width": 1080,
+        "height": 325
+      },
+      "link":{
+        "url": "http://splatjs.com"
+      }
+    },
+    {
+      "id": 9,
+      "name": "twoscoop-link",
+      "position": {
+        "x": 0,
+        "y": 1505
+      },
+      "size": {
+        "width": 1080,
+        "height": 325
+      },
+      "link":{
+        "url": "http://twoscoopgames.com"
+      }
+    }
+  ]
 }

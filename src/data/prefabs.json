@@ -1,1 +1,102 @@
-{}
+{
+  "symbolCircle": {
+    "name": "symbolCircle",
+    "position": {
+     "x": 0,
+     "y": 0
+    },
+    "size": {
+     "width": 122,
+     "height": 122
+    },
+    "image": {
+      "name": "symbol-cir.png",
+      "destinationX": 6,
+      "destinationY": 6,
+      "destinationWidth": 110,
+      "destinationHeight": 110
+    }
+  },
+  "symbolSquare": {
+    "name": "symbolSquare",
+    "position": {
+     "x": 0,
+     "y": 0
+    },
+    "size": {
+     "width": 122,
+     "height": 122
+    },
+    "image": {
+      "name": "symbol-sqa.png",
+      "destinationX": 6,
+      "destinationY": 6,
+      "destinationWidth": 110,
+      "destinationHeight": 110
+    }
+  },
+  "symbolStar": {
+    "name": "symbolStar",
+    "position": {
+     "x": 0,
+     "y": 0
+    },
+    "size": {
+     "width": 122,
+     "height": 122
+    },
+    "image": {
+      "name": "symbol-sta.png",
+      "destinationX": 6,
+      "destinationY": 6,
+      "destinationWidth": 110,
+      "destinationHeight": 110
+    }
+  },
+  "symbolTriangle": {
+    "name": "symbolTriangle",
+    "position": {
+     "x": 0,
+     "y": 0
+    },
+    "size": {
+     "width": 122,
+     "height": 122
+    },
+    "image": {
+      "name": "symbol-tri.png",
+      "destinationX": 6,
+      "destinationY": 6,
+      "destinationWidth": 110,
+      "destinationHeight": 110
+    }
+  },
+  "column": {
+    "name": "column",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 3
+    },
+    "size": {
+      "width": 149,
+      "height": 1043
+    },
+    "fillColor": "green",
+    "dragY": {}
+  },
+  "row": {
+    "name": "row",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 2
+    },
+    "size": {
+      "width": 1043,
+      "height": 149
+    },
+    "fillColor": "red",
+    "dragX": {}
+  }
+}

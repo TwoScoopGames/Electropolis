@@ -1,0 +1,224 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#009999" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Macintosh" versionInfo="Saved by Adobe Flash Macintosh 12.0 build 481" majorVersion="12" buildNumber="481" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveIntervalMinutes="1">
+     <symbols>
+          <Include href="Symbol 1.xml" loadImmediate="false" itemID="56e24488-0000028d" lastModified="1457669256"/>
+          <Include href="Symbol 2.xml" loadImmediate="false" itemID="56e2448c-00000291" lastModified="1457669260"/>
+          <Include href="Symbol 3.xml" loadImmediate="false" itemID="56e24490-00000294" lastModified="1457669264"/>
+          <Include href="Symbol 4.xml" loadImmediate="false" itemID="56e24495-00000297" lastModified="1457669269"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" currentFrame="9">
+               <layers>
+                    <DOMLayer name="Symbol 4" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 4" centerPoint3DX="308.9" centerPoint3DY="287.15">
+                                             <matrix>
+                                                  <Matrix a="0.665145874023438" d="0.665145874023438" tx="273.15" ty="251.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.8" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 4" centerPoint3DX="307.1" centerPoint3DY="284">
+                                             <matrix>
+                                                  <Matrix a="0.768798828125" d="0.768798828125" tx="265.75" ty="242.55"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.85"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 4" centerPoint3DX="307.95" centerPoint3DY="285.6">
+                                             <matrix>
+                                                  <Matrix a="0.71697998046875" d="0.71697998046875" tx="269.45" ty="246.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 4" centerPoint3DX="308.6" centerPoint3DY="286.45">
+                                             <matrix>
+                                                  <Matrix a="0.685882568359375" d="0.685882568359375" tx="271.7" ty="249.5"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.8" y="53.85"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Symbol 3" color="#FF4FFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 3" centerPoint3DX="160.2" centerPoint3DY="287.15">
+                                             <matrix>
+                                                  <Matrix a="0.65228271484375" d="0.65228271484375" tx="125" ty="252"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.9" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 3" centerPoint3DX="161.55" centerPoint3DY="285.35">
+                                             <matrix>
+                                                  <Matrix a="0.740707397460938" d="0.740707397460938" tx="121.6" ty="245.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 3" selected="true" centerPoint3DX="160.9" centerPoint3DY="286.25">
+                                             <matrix>
+                                                  <Matrix a="0.696502685546875" d="0.696502685546875" tx="123.3" ty="248.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.9" y="53.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 3" centerPoint3DX="160.4" centerPoint3DY="286.8">
+                                             <matrix>
+                                                  <Matrix a="0.669967651367188" d="0.669967651367188" tx="124.3" ty="250.7"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.9" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Symbol 2" color="#4FFFFF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" centerPoint3DX="308.9" centerPoint3DY="138.4">
+                                             <matrix>
+                                                  <Matrix a="0.665115356445312" d="0.665115356445312" tx="273.15" ty="102.6"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.85"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" centerPoint3DX="306.65" centerPoint3DY="140.2">
+                                             <matrix>
+                                                  <Matrix a="0.770111083984375" d="0.770111083984375" tx="265.25" ty="98.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.8" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" centerPoint3DX="307.8" centerPoint3DY="139.25">
+                                             <matrix>
+                                                  <Matrix a="0.717620849609375" d="0.717620849609375" tx="269.2" ty="100.65"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 2" centerPoint3DX="308.45" centerPoint3DY="138.75">
+                                             <matrix>
+                                                  <Matrix a="0.68609619140625" d="0.68609619140625" tx="271.55" ty="101.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Symbol 1" color="#808080" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1" centerPoint3DX="160.2" centerPoint3DY="138.4">
+                                             <matrix>
+                                                  <Matrix a="0.6651611328125" d="0.6651611328125" tx="124.3" ty="102.6"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.9" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="5" duration="4" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1" centerPoint3DX="164.25" centerPoint3DY="139.75">
+                                             <matrix>
+                                                  <Matrix a="0.79412841796875" d="0.79412841796875" tx="121.4" ty="97"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.9" y="53.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="5" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1" centerPoint3DX="162.3" centerPoint3DY="139.05">
+                                             <matrix>
+                                                  <Matrix a="0.729644775390625" d="0.729644775390625" tx="122.9" ty="99.8"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.95" y="53.8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1" centerPoint3DX="161" centerPoint3DY="138.7">
+                                             <matrix>
+                                                  <Matrix a="0.690948486328125" d="0.690948486328125" tx="123.75" ty="101.5"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="53.85" y="53.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings platform="macintosh"/>
+     <publishHistory/>
+</DOMDocument>
