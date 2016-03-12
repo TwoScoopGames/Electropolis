@@ -47,6 +47,23 @@
 				"name": "logo.png"
 			}
 		},
+    {
+			"id": 100,
+			"name": "background-thing",
+			"position": {
+				"x": 0,
+				"y": 1697
+			},
+			"size": {
+				"width": 5000,
+				"height": 323
+			},
+      "matchCenterX": {
+				"id": 1
+			},
+			"fillColor": "#76894e"
+
+		},
 		{
 			"id": 2,
 			"name": "play-button",
