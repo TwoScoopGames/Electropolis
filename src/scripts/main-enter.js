@@ -72,18 +72,12 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
       colPosition.x = getTileX(x) - (tilePadding / 2);
       colPosition.y = gridPos.y + gridPadding - (tilePadding / 2);
 
-      var t = makeTile(game, grid[y][x], getTileX(x), getTileY(y), row, rowPosition.x, col, colPosition.y);
-      if (x === 0 && y === 0) {
-        console.log(col, colPosition.y, game.entities._entities[t], game.entities._entities[col]);
-      }
+      makeTile(game, grid[y][x], getTileX(x), getTileY(y), row, rowPosition.x, col, colPosition.y);
     }
   }
   for (x = 0; x < gridWidth; x++) {
     col = cols[x];
     colPosition = game.entities.get(col, "position");
-    var tile = makeTile(game, grid[gridHeight - 1][x], getTileX(x), getTileY(-1), col, colPosition.x, col, colPosition.y);
-    if (x === 0) {
-      console.log(col, colPosition.y, game.entities._entities[tile], game.entities._entities[col]);
-    }
+    makeTile(game, grid[gridHeight - 1][x], getTileX(x), getTileY(-1), col, colPosition.x, col, colPosition.y);
   }
 };
