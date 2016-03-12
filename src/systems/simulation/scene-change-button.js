@@ -20,7 +20,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     if (game.inputs.button("action")) {
       var image = game.entities.get(entity, "image");
       var pressedImage = game.entities.get(entity, "pressed-image");
-      image.name = pressedImage.name;
+      if (pressedImage) {
+        image.name = pressedImage.name;
+      }
     }
 
     if (game.inputs.buttonReleased("action")) {

@@ -2008,7 +2008,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "howdycara-link",
       "position": {
         "x": 0,
@@ -2023,7 +2023,7 @@
       }
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "lolo_r-link",
       "position": {
         "x": 0,
@@ -2038,7 +2038,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "splatjs-link",
       "position": {
         "x": 0,
@@ -2053,7 +2053,7 @@
       }
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "twoscoop-link",
       "position": {
         "x": 0,
@@ -2065,6 +2065,19 @@
       },
       "link":{
         "url": "http://twoscoopgames.com"
+      }
+    },
+    {
+      "id": 11,
+      "name": "close-button",
+      "change-scene" : "title",
+      "position": {
+        "x": 914,
+        "y": 20
+      },
+      "size": {
+        "width": 146,
+        "height": 146
       }
     },
     {
