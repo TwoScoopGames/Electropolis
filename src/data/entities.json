@@ -277,7 +277,7 @@
 				"name": "town.png"
 			},
       "timers":{
-        "temp":{
+        "decrement":{
         "running": true,
         "time": 0,
         "max": 100,

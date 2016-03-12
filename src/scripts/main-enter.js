@@ -17,11 +17,13 @@ function generatePowerThresholds(game) {
 }
 
 var grid = require("../grid");
+var powerLevel = require("../powerLevel");
 
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.scaleCanvasToFitRectangle(1080, 1920);
   game.sounds.play("ThunderLoop.mp3", true);
 
+  powerLevel.set(100);
   generatePowerThresholds(game);
   grid.create();
   grid.createEntities(game);
