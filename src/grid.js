@@ -25,10 +25,35 @@ function create() {
     }
   }
   var m = matches();
-  for (var i = 0; i < m.length; i++) {
-    for (var j = 0; j < m[i].length; j++) {
-      var match = m[i][j];
-      grid[match.y][match.x] = undefined;
+  while (m.length > 0) {
+    for (var i = 0; i < m.length; i++) {
+      for (var j = 0; j < m[i].length; j++) {
+        var match = m[i][j];
+        grid[match.y][match.x] = undefined;
+      }
+    }
+    slideDown();
+    m = matches();
+  }
+}
+
+function stealTileFromAbove(x, y) {
+  for (var yc = y - 1; yc >= 0; yc--) {
+    if (grid[yc][x] !== undefined) {
+      var val = grid[yc][x];
+      grid[yc][x] = undefined;
+      return val;
+    }
+  }
+  return randomItem(symbols);
+}
+
+function slideDown() {
+  for (var x = 0; x < api.gridWidth; x++) {
+    for (var y = api.gridHeight - 1; y >= 0; y--) {
+      if (grid[y][x] === undefined) {
+        grid[y][x] = stealTileFromAbove(x, y);
+      }
     }
   }
 }
