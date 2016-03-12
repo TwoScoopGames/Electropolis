@@ -1,106 +1,88 @@
 {
-	"title": [
-		{
-			"id": 0,
-			"name": "camera",
-			"camera": true,
-			"position": {
-				"x": 0,
-				"y": 0
-			},
-			"matchCanvasSize": true,
-			"matchCenterX": {
-				"id": 1
-			},
-			"matchCenterY": {
-				"id": 1
-			},
-			"fillColor": "#454C56"
-		},
-		{
-			"id": 1,
-			"name": "viewport",
-			"position": {
-				"x": 0,
-				"y": 0
-			},
-			"size": {
-				"width": 1080,
-				"height": 1920
-			}
-		},
+  "title": [
     {
-			"id": 5,
-			"name": "logo",
-			"position": {
-				"x": 0,
-				"y": 250
-			},
-			"size": {
-				"width": 1801,
-				"height": 1781
-			},
+      "id": 0,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
       "matchCenterX": {
-				"id": 1
-			},
-			"image":{
-				"name": "logo.png"
-			}
-		},
+        "id": 1
+      },
+      "matchCenterY": {
+        "id": 1
+      },
+      "fillColor": "#454C56"
+    },
     {
-			"id": 100,
-			"name": "background-thing",
-			"position": {
-				"x": 0,
-				"y": 1697
-			},
-			"size": {
-				"width": 5000,
-				"height": 323
-			},
+      "id": 1,
+      "name": "viewport",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    {
+      "id": 5,
+      "name": "logo",
+      "position": {
+        "x": 0,
+        "y": 250
+      },
+      "size": {
+        "width": 1801,
+        "height": 1781
+      },
       "matchCenterX": {
-				"id": 1
-			},
-			"fillColor": "#76894e"
+        "id": 1
+      },
+      "image":{
+        "name": "logo.png"
+      }
+    },
+    {
+      "id": 100,
+      "name": "background-thing",
+      "position": {
+        "x": 0,
+        "y": 1697
+      },
+      "size": {
+        "width": 5000,
+        "height": 323
+      },
+      "matchCenterX": {
+        "id": 1
+      },
+      "fillColor": "#76894e"
 
-		},
-		{
-			"id": 2,
-			"name": "play-button",
-			"change-scene" : "main",
-			"position": {
-				"x": 236,
-				"y": 1334
-			},
-			"size": {
-				"width": 588,
-				"height": 183
-			},
-			"image":{
-				"name": "button-play-up.png"
-			},
-			"pressed-image":{
-				"name": "button-play-down.png"
-			}
-		},
-		{
-			"id": 3,
-			"name": "mute-button",
-			"position": {
-				"x": 892,
-				"y": 20
-			},
-			"size": {
-				"width": 168,
-				"height": 181
-			},
-			"image":{
-				"name": "button-sound-on.png"
-			},
-			"pressed-image":{
-				"name": "button-sound-off.png"
-			}
-		},
+    },
+    {
+      "id": 2,
+      "name": "play-button",
+      "change-scene" : "main",
+      "position": {
+        "x": 236,
+        "y": 1334
+      },
+      "size": {
+        "width": 588,
+        "height": 183
+      },
+      "image":{
+        "name": "button-play-up.png"
+      },
+      "pressed-image":{
+        "name": "button-play-down.png"
+      }
+    },
     {
       "id": 201,
       "name": "cloudSpawner1",
@@ -122,24 +104,24 @@
       }
     },
     {
-			"id": 250,
-			"name": "credits-button",
-			"change-scene" : "credits",
-			"position": {
-				"x": 236,
-				"y": 1534
-			},
-			"size": {
-				"width": 588,
-				"height": 183
-			},
-			"image":{
-				"name": "button-credits-up.png"
-			},
-			"pressed-image":{
-				"name": "button-credits-down.png"
-			}
-		},
+      "id": 250,
+      "name": "credits-button",
+      "change-scene" : "credits",
+      "position": {
+        "x": 236,
+        "y": 1534
+      },
+      "size": {
+        "width": 588,
+        "height": 183
+      },
+      "image":{
+        "name": "button-credits-up.png"
+      },
+      "pressed-image":{
+        "name": "button-credits-down.png"
+      }
+    },
     {
       "id": 202,
       "name": "cloudSpawner2",
@@ -180,143 +162,125 @@
         "offset" : 0
       }
     }
-	],
-	"main": [
-		{
-			"id": 0,
-			"name": "camera",
-			"camera": true,
-			"position": {
-				"x": 0,
-				"y": 0
-			},
-			"matchCanvasSize": true,
-			"matchCenterX": {
-				"id": 1
-			},
-			"matchCenterY": {
-				"id": 1
-			},
-			"fillColor": "#454C56"
-		},
-		{
-			"id": 1,
-			"name": "viewport",
-			"position": {
-				"x": 0,
-				"y": 0
-			},
-			"size": {
-				"width": 1080,
-				"height": 1920
-			}
-		},
-		{
-			"id": 2,
-			"name": "grid",
-			"position": {
-				"x": 0,
-				"y": 250,
-				"z": -1
-			},
-			"size": {
-				"width": 1080,
-				"height": 1080
-			},
-			"image": {
-				"name": "grid.png"
-			}
-		},
-		{
-			"id": 3,
-			"name": "cloud1",
-			"position": {
-				"x": 0,
-				"y": 0,
-				"z": -2
-			},
-			"velocity": {
-				"x": -0.1,
-				"y": 0
-			},
-			"image": {
-				"name": "cloud1.png"
-			}
-		},
+  ],
+  "main": [
     {
-			"id": 4,
-			"name": "pause-button",
-			"position": {
-				"x": 892,
-				"y": 20
-			},
-			"size": {
-				"width": 168,
-				"height": 181
-			},
-			"image":{
-				"name": "button-pause-up.png"
-			},
-			"pressed-image":{
-				"name": "button-pause-down.png"
-			}
-		},
+      "id": 0,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenterX": {
+        "id": 1
+      },
+      "matchCenterY": {
+        "id": 1
+      },
+      "fillColor": "#454C56"
+    },
     {
-			"id": 5,
-			"name": "town",
-			"position": {
-				"x": 153,
-				"y": 1613,
-				"z": 1
-			},
+      "id": 1,
+      "name": "viewport",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    {
+      "id": 2,
+      "name": "grid",
+      "position": {
+        "x": 0,
+        "y": 250,
+        "z": -1
+      },
+      "size": {
+        "width": 1080,
+        "height": 1080
+      },
+      "image": {
+        "name": "grid.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "cloud1",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "velocity": {
+        "x": -0.1,
+        "y": 0
+      },
+      "image": {
+        "name": "cloud1.png"
+      }
+    },
+    {
+      "id": 5,
+      "name": "town",
+      "position": {
+        "x": 153,
+        "y": 1613,
+        "z": 1
+      },
       "size":{
         "width": 953,
         "height": 207
       },
-			"image": {
-				"name": "town.png"
-			},
+      "image": {
+        "name": "town.png"
+      },
       "timers":{
         "decrement":{
         "running": true,
         "time": 0,
-        "max": 100,
+        "max": 300,
         "script": "./scripts/decrement-power-level"
        }
      }
     },
     {
-			"id": 90,
-			"name": "hills",
-			"position": {
-				"x": -70,
-				"y": 1320,
-				"z": -2
-			},
+      "id": 90,
+      "name": "hills",
+      "position": {
+        "x": -70,
+        "y": 1320,
+        "z": -2
+      },
       "size":{
         "width": 1225,
         "height": 368
       },
-			"image": {
-				"name": "hills.png"
-			}
+      "image": {
+        "name": "hills.png"
+      }
     },
     {
-			"id": 91,
-			"name": "city",
-			"position": {
-				"x": 0,
-				"y": 1495,
-				"z": -1
-			},
+      "id": 91,
+      "name": "city",
+      "position": {
+        "x": 0,
+        "y": 1495,
+        "z": -1
+      },
       "size":{
         "width": 1097,
         "height": 459
       },
 
-			"image": {
-				"name": "city.png"
-			}
+      "image": {
+        "name": "city.png"
+      }
     },
     {
       "id": 94,
@@ -372,7 +336,7 @@
       "speed": 1,
       "name": "lights-on"
     }
-		},
+    },
     {
       "id": 7,
       "powerThreshold": 0, "name": "window2",
@@ -1901,7 +1865,7 @@
   }
 }
 
-	],
+  ],
   "credits": [
     {
       "id": 0,
@@ -2008,7 +1972,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "howdycara-link",
       "position": {
         "x": 0,
@@ -2023,7 +1987,7 @@
       }
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "lolo_r-link",
       "position": {
         "x": 0,
@@ -2038,7 +2002,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "splatjs-link",
       "position": {
         "x": 0,
@@ -2053,7 +2017,7 @@
       }
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "twoscoop-link",
       "position": {
         "x": 0,
@@ -2065,6 +2029,19 @@
       },
       "link":{
         "url": "http://twoscoopgames.com"
+      }
+    },
+    {
+      "id": 11,
+      "name": "close-button",
+      "change-scene" : "title",
+      "position": {
+        "x": 914,
+        "y": 20
+      },
+      "size": {
+        "width": 146,
+        "height": 146
       }
     },
     {

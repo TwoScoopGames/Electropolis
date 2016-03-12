@@ -171,6 +171,11 @@
    ]
   },
   {
+   "name": "splat-ecs/lib/systems/draw-rectangles",
+   "scenes": [
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
     "title", "main", "credits"
