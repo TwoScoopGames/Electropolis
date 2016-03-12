@@ -115,12 +115,6 @@
     ]
   },
   {
-   "name": "./systems/simulation/sample-simulation-system",
-   "scenes": [
-    "title", "main", "credits"
-   ]
-  },
-  {
    "name": "./systems/simulation/swap-image-on-power-threshold",
   "scenes": [
    "title", "main", "credits"
@@ -154,12 +148,6 @@
   },
   {
    "name": "./systems/renderer/fill-solid-color",
-   "scenes": [
-    "title", "main", "credits"
-   ]
-  },
-  {
-   "name": "./systems/renderer/sample-renderer-system",
    "scenes": [
     "title", "main", "credits"
    ]

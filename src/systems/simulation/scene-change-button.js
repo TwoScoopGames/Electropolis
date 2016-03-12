@@ -2,7 +2,7 @@
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("scene-change-button-search", ["change-scene", "position", "size"]);
-  ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function sceneChangeButton(entity, elapsed) { // eslint-disable-line no-unused-vars
 
     if (game.inputs.button("action")) {
       var image = game.entities.get(entity, "image");

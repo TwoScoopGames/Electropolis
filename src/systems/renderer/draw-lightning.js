@@ -32,7 +32,7 @@ function drawLightning(points, context, elapsed) {
 }
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function drawLightningSystem(entity, context, elapsed) { // eslint-disable-line no-unused-vars
     var lightning = game.entities.get(entity, "lightning");
     if (lightning.elapsed > whiteFadeTime) {
       game.entities.remove(entity);
