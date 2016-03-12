@@ -1,6 +1,7 @@
 "use strict";
 
 var getMousePos = require("../../get-mouse-pos");
+//var screenShake = require("../../screen-shake");
 
 var midpoint = function(p1, p2) {
   var x = ((p2.x - p1.x) / 2) + p1.x;
@@ -71,10 +72,13 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     if (game.inputs.buttonPressed(input)) {
       game.sounds.play(randomFrom(lightningSounds));
       var mouse = getMousePos(game);
+      //screenShake(game, 10);
       spawnLightning(0, 0, mouse.x, mouse.y, game, 0.7);
       spawnLightning(1080, 0, mouse.x, mouse.y, game, 0.7);
       spawnLightning(0, 1080, mouse.x, mouse.y, game, 0.7);
       spawnLightning(1080, 1080, mouse.x, mouse.y, game, 0.7);
+
+
     }
   }, "triggerLightning");
 };

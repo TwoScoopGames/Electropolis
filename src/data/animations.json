@@ -1,7 +1,7 @@
 {
   "lights-on": [{
       "filmstripFrames": 10,
-      "time": 200,
+      "time": 100,
       "properties": {
           "image": {
               "name": "lights-on.png",
@@ -9,6 +9,58 @@
               "sourceY": 0,
               "sourceWidth": 10,
               "sourceHeight": 1
+          }
+      }
+	}],
+  "symbol-tri-f13": [{
+      "filmstripFrames": 13,
+      "time": 100,
+      "properties": {
+          "image": {
+              "name": "symbol-tri-f13.png",
+              "sourceX": 0,
+              "sourceY": 0,
+              "sourceWidth": 1560,
+              "sourceHeight": 120
+          }
+      }
+	}],
+  "symbol-sqa-f13": [{
+      "filmstripFrames": 13,
+      "time": 100,
+      "properties": {
+          "image": {
+              "name": "symbol-sqa-13.png",
+              "sourceX": 0,
+              "sourceY": 0,
+              "sourceWidth": 1430,
+              "sourceHeight": 110
+          }
+      }
+	}],
+  "symbol-sta-f13": [{
+      "filmstripFrames": 13,
+      "time": 100,
+      "properties": {
+          "image": {
+              "name": "symbol-sta-f13.png",
+              "sourceX": 0,
+              "sourceY": 0,
+              "sourceWidth": 1430,
+              "sourceHeight": 110
+          }
+      }
+	}],
+  "symbol-cir-f13": [{
+      "filmstripFrames": 13,
+      "time": 100,
+      "properties": {
+          "image": {
+              "name": "symbol-cir-f13.png",
+              "sourceX": 0,
+              "sourceY": 0,
+              "sourceWidth": 1430,
+              "sourceHeight": 110
           }
       }
 	}]
