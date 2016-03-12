@@ -2,7 +2,7 @@
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("fade-outside-search", ["fadeOutside", "position", "size", "image"]);
-  ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function fadeOutside(entity, elapsed) { // eslint-disable-line no-unused-vars
     var position = game.entities.get(entity, "position");
     var size = game.entities.get(entity, "size");
     var image = game.entities.get(entity, "image");

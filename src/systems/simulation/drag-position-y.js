@@ -5,7 +5,7 @@ var getMousePos = require("../../get-mouse-pos");
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("drag-position-y", ["dragY", "position", "size"]);
-  ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function dragPositionY(entity, elapsed) { // eslint-disable-line no-unused-vars
     if (game.entities.find("intro").length > 0 || game.entities.find("outro").length > 0) {
       return;
     }

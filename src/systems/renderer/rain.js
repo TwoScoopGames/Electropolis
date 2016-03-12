@@ -51,7 +51,7 @@ var rainDrops = [];
 var maxDrops = 1000;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function rain(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
     if (rainDrops.length < maxDrops) {
       var randomXY = {
