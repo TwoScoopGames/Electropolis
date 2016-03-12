@@ -11,10 +11,6 @@ module.exports = function(ecs, game) {
       return;
     }
 
-    game.entities.set(entity, "position", {
-      x: position.x,
-      y: parentPosition.y + match.offset,
-      z: position.z
-    });
+    position.y = parentPosition.y + match.offset;
   }, "matchParentX");
 };
