@@ -146,12 +146,7 @@
     "title", "main", "credits"
    ]
   },
-  {
-   "name": "splat-ecs/lib/systems/draw-rectangles",
-   "scenes": [
-    "title", "main", "credits"
-   ]
-  },
+
   {
     "name": "./systems/renderer/draw-lightning",
     "scenes": [
