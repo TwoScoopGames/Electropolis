@@ -78,13 +78,17 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   for (x = 0; x < gridWidth; x++) {
     col = cols[x];
     colPosition = game.entities.get(col, "position");
-    makeTile(game, grid[gridHeight - 1][x], getTileX(x), getTileY(-1), col, colPosition.x, col, colPosition.y);
-    makeTile(game, grid[0][x], getTileX(x), getTileY(gridHeight), col, colPosition.x, col, colPosition.y);
+    for (y = -1; y > -1 - gridHeight; y--) {
+      makeTile(game, grid[gridHeight + y][x], getTileX(x), getTileY(y), col, colPosition.x, col, colPosition.y);
+      makeTile(game, grid[-1 - y][x], getTileX(x), getTileY(gridHeight - 1 - y), col, colPosition.x, col, colPosition.y);
+    }
   }
   for (y = 0; y < gridHeight; y++) {
     row = rows[y];
     rowPosition = game.entities.get(row, "position");
-    makeTile(game, grid[y][gridWidth - 1], getTileX(-1), getTileY(y), row, rowPosition.x, row, rowPosition.y);
-    makeTile(game, grid[y][0], getTileX(gridWidth), getTileY(y), row, rowPosition.x, row, rowPosition.y);
+    for (x = -1; x > -1 - gridWidth; x--) {
+      makeTile(game, grid[y][gridWidth + x], getTileX(x), getTileY(y), row, rowPosition.x, row, rowPosition.y);
+      makeTile(game, grid[y][-1 - x], getTileX(gridWidth - 1 - x), getTileY(y), row, rowPosition.x, row, rowPosition.y);
+    }
   }
 };
