@@ -1,6 +1,6 @@
 "use strict";
 
-var powerLevel = 40;
+var powerLevel = 100;
 module.exports = {
   "get": function() {
     return powerLevel;

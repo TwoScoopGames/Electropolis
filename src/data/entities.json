@@ -179,7 +179,15 @@
       },
 			"image": {
 				"name": "town.png"
-			}
+			},
+      "timers":{
+        "temp":{
+        "running": true,
+        "time": 0,
+        "max": 100,
+        "script": "./scripts/decrement-power-level"
+       }
+     }
     },
     {
 			"id": 90,
