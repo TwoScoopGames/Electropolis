@@ -2,6 +2,17 @@
 
 var grid = require("../../grid");
 var getMousePos = require("../../get-mouse-pos");
+var spawnLightning = require("../../spawn-lightning");
+
+function zapMatches(game, matches) {
+  for (var i = 0; i < matches.length; i++) {
+    var x1 = grid.getTileX(game, matches[i][0].x) + grid.tileSize / 2;
+    var y1 = grid.getTileY(game, matches[i][0].y) + grid.tileSize / 2;
+    var x2 = grid.getTileX(game, matches[i][matches[i].length - 1].x) + grid.tileSize / 2;
+    var y2 = grid.getTileY(game, matches[i][matches[i].length - 1].y) + grid.tileSize / 2;
+    spawnLightning(x1, y1, x2, y2, game, 0);
+  }
+}
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("drag-position-y", ["dragY", "position", "size"]);
@@ -54,6 +65,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         if (matches.length > 0) {
           grid.destroyEntities(game);
           grid.createEntities(game);
+          zapMatches(game, matches);
           return;
         }
       }

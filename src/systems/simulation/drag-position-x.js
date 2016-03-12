@@ -6,11 +6,10 @@ var spawnLightning = require("../../spawn-lightning");
 
 function zapMatches(game, matches) {
   for (var i = 0; i < matches.length; i++) {
-    var x1 = grid.getTileX(game, matches[i][0].x);
-    var y1 = grid.getTileY(game, matches[i][0].y);
-    var x2 = grid.getTileX(game, matches[i][matches[i].length - 1].x);
-    var y2 = grid.getTileY(game, matches[i][matches[i].length - 1].y);
-    console.log(x1, y1, x2, y2);
+    var x1 = grid.getTileX(game, matches[i][0].x) + grid.tileSize / 2;
+    var y1 = grid.getTileY(game, matches[i][0].y) + grid.tileSize / 2;
+    var x2 = grid.getTileX(game, matches[i][matches[i].length - 1].x) + grid.tileSize / 2;
+    var y2 = grid.getTileY(game, matches[i][matches[i].length - 1].y) + grid.tileSize / 2;
     spawnLightning(x1, y1, x2, y2, game, 0);
   }
 }
