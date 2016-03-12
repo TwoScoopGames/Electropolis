@@ -19,8 +19,11 @@ function generatePowerThresholds(game) {
 var grid = require("../grid");
 grid.create();
 
-function makeTile(game, prefabs, x, y, row, rowX, column, columnY) {
-  var tile = game.instantiatePrefab(prefabs);
+function makeTile(game, prefab, x, y, row, rowX, column, columnY) {
+  if (prefab === undefined) {
+    return;
+  }
+  var tile = game.instantiatePrefab(prefab);
   var position = game.entities.get(tile, "position");
   position.x = x;
   position.y = y;
