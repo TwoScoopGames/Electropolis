@@ -79,5 +79,6 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
     col = cols[x];
     colPosition = game.entities.get(col, "position");
     makeTile(game, grid[gridHeight - 1][x], getTileX(x), getTileY(-1), col, colPosition.x, col, colPosition.y);
+    makeTile(game, grid[0][x], getTileX(x), getTileY(gridHeight), col, colPosition.x, col, colPosition.y);
   }
 };
