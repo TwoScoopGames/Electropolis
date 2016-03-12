@@ -1,5 +1,7 @@
 "use strict";
 
+var getMousePos = require("../../get-mouse-pos");
+
 var midpoint = function(p1, p2) {
   var x = ((p2.x - p1.x) / 2) + p1.x;
   var y = ((p2.y - p1.y) / 2) + p1.y;
@@ -37,10 +39,10 @@ var getLightningPoints = function(start, end) {
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
     var input = game.entities.get(entity, "triggerLightning").input;
-    console.log(input);
     if (game.inputs.buttonPressed(input)) {
       //var points = getLightningPoints({ "x": Math.random() * 1080, "y": Math.random() * 1080 },{ "x": Math.random() * 1080, "y": Math.random() * 1080 });
-      var initial = getLightningPoints({ "x": 100, "y": 100 }, { "x": 100, "y": 400 });
+      var mouse = getMousePos(game);
+      var initial = getLightningPoints({ "x": 0, "y": 0 }, { "x": mouse.x, "y": mouse.y });
       var forkStart = initial[Math.floor(Math.random() * initial.length)];
       var forkEnd = offset(initial[initial.length - 1], initial[0], 180);
       var forkpoints = getLightningPoints({ "x": forkStart.x, "y": forkStart.y }, { "x": forkEnd.x, "y": forkEnd.y });
