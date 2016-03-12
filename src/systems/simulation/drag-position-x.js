@@ -72,6 +72,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         console.log("row", row, "moved", tilesMoved);
         var matches = grid.rotateRow(row, tilesMoved);
         if (matches.length > 0) {
+          game.sounds.play("Match.mp3");
           grid.destroyEntities(game);
           grid.createEntities(game);
           zapMatches(game, matches);

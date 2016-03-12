@@ -124,7 +124,7 @@
     {
 			"id": 250,
 			"name": "credits-button",
-			"change-scene" : "main",
+			"change-scene" : "credits",
 			"position": {
 				"x": 236,
 				"y": 1534
