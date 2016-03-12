@@ -7,7 +7,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var cameraPosition = game.entities.get(0, "position");
 
     if (position.x < cameraPosition.x - size.width) {
-      console.log("destory cloud");
       game.entities.destroy(entity);
     }
 
