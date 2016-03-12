@@ -29,6 +29,24 @@
 				"height": 1920
 			}
 		},
+    {
+			"id": 5,
+			"name": "logo",
+			"position": {
+				"x": 0,
+				"y": 250
+			},
+			"size": {
+				"width": 1020,
+				"height": 503
+			},
+      "matchCenterX": {
+				"id": 1
+			},
+			"image":{
+				"name": "logo.png"
+			}
+		},
 		{
 			"id": 2,
 			"name": "play-button",
@@ -49,24 +67,6 @@
 			}
 		},
 		{
-			"id": 3,
-			"name": "mute-button",
-			"position": {
-				"x": 20,
-				"y": 20
-			},
-			"size": {
-				"width": 168,
-				"height": 181
-			},
-			"image":{
-				"name": "button-sound-on.png"
-			},
-			"pressed-image":{
-				"name": "button-sound-off.png"
-			}
-		},
-    {
 			"id": 3,
 			"name": "mute-button",
 			"position": {
