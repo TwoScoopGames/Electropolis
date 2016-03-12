@@ -10,7 +10,7 @@ var init = function(game) {
     var cloud1Velocity = game.entities.get(cloud1, "velocity");
 
     if (i < 3) {
-    	console.log(i, i % 3, (camera.x + (500 * (i % 3))));
+      console.log(i, i % 3, (camera.x + (500 * (i % 3))));
       cloud1Position.x = (camera.x + (600 * (i % 3)));
       cloud1Position.y = 0;
       cloud1Velocity.x = -.0575;

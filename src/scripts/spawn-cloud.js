@@ -2,7 +2,7 @@
 //need to garbage collect clouds that travel off screen.
 
 module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
-  if (game.entities.find("cleanUp").length === 0){
+  if (game.entities.find("cleanUp").length === 0) {
     var initClouds = require("../init-clouds");
     initClouds(game);
   }
