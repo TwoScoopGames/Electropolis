@@ -184,7 +184,6 @@
   {
    "name": "splat-ecs/lib/systems/draw-frame-rate",
    "scenes": [
-    "title", "main", "credits"
    ]
   }
  ]
