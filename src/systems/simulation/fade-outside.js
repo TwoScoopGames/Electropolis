@@ -9,7 +9,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     var other = game.entities.get(entity, "fadeOutside").id;
     var otherPosition = game.entities.get(other, "position");
+    otherPosition = { "x": otherPosition.x + 6, "y": otherPosition.y + 6 };
     var otherSize = game.entities.get(other, "size");
+    otherSize = { "width": otherSize.width - 12, "height": otherSize.height - 12 };
 
     var dl = otherPosition.x - position.x;
     var dr = position.x + size.width - otherPosition.x - otherSize.width;
