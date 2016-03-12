@@ -78,6 +78,10 @@
       {
         "device": "mouse",
         "button": 0
+      },
+      {
+        "device": "keyboard",
+        "button": "space"
       }
     ]
   }

@@ -641,7 +641,14 @@
     "height": 22
   },
   "fillColor": "#EEE45F"
-}
+},
+    {
+    "id": 200,
+    "name": "lightning",
+    "triggerLightning" : {
+      "input" : "action"
+    }
+    }
 	],
   "credits": [
     {
