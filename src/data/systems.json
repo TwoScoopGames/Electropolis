@@ -153,7 +153,7 @@
    ]
   },
   {
-   "name": "./systems/renderer/draw-image",
+   "name": "splat-ecs/lib/systems/draw-image",
    "scenes": [
     "title", "main", "credits"
    ]
