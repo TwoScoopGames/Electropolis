@@ -7,6 +7,7 @@
   "scripts": {
     "build": "webpack",
     "clean": "rimraf build",
+    "electron": "webpack && cp electron/* build/ && electron-packager build electropolis --platform=all --arch=x64 --version=0.37.1 --overwrite",
     "lint": "eslint .",
     "start": "webpack-dev-server --hot --inline --content-base build --host 0.0.0.0 --port 4000",
     "watch": "webpack --watch"
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/SplatJS/splat-ecs-starter-project",
   "devDependencies": {
+    "electron-packager": "^5.2.1",
     "eslint": "^1.10.1",
     "eslint-loader": "^1.1.1",
     "eslint-plugin-json": "^1.2.0",
