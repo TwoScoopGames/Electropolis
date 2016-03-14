@@ -1,7 +1,7 @@
 {
-  "name": "splat-ecs-starter-project",
+  "name": "electropolis",
   "version": "0.0.0",
-  "description": "A Sample game",
+  "description": "Electropolis - Power a city by creating lightning from matches in the clouds.",
   "private": true,
   "main": "src/game.js",
   "scripts": {
