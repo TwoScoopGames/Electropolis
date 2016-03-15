@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "clean": "rimraf build",
-    "electron": "webpack && cp electron/* build/ && electron-packager build electropolis --platform=all --arch=x64 --version=0.37.1 --overwrite",
+    "electron": "webpack && node electron.js",
     "lint": "eslint .",
     "start": "webpack-dev-server --hot --inline --content-base build --host 0.0.0.0 --port 4000",
     "watch": "webpack --watch"
@@ -31,6 +31,7 @@
     "file-loader": "^0.8.5",
     "image-webpack-loader": "^1.6.2",
     "json-loader": "^0.5.4",
+    "ncp": "^2.0.0",
     "rimraf": "^2.4.4",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"

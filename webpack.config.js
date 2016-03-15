@@ -6,7 +6,7 @@ var environment = process.env["NODE_ENV"] || "development";
 module.exports = {
   entry: "./src/game",
   output: {
-    path: __dirname + "/build",
+    path: __dirname + "/build/html",
     filename: "index.js"
   },
   module: {
