@@ -3,14 +3,14 @@
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("fade-outside-search", ["fadeOutside", "position", "size", "image"]);
   ecs.addEach(function fadeOutside(entity, elapsed) { // eslint-disable-line no-unused-vars
-    var position = game.entities.get(entity, "position");
-    var size = game.entities.get(entity, "size");
-    var image = game.entities.get(entity, "image");
+    var position = game.entities.getComponent(entity, "position");
+    var size = game.entities.getComponent(entity, "size");
+    var image = game.entities.getComponent(entity, "image");
 
-    var other = game.entities.get(entity, "fadeOutside").id;
-    var otherPosition = game.entities.get(other, "position");
+    var other = game.entities.getComponent(entity, "fadeOutside");
+    var otherPosition = game.entities.getComponent(other, "position");
     otherPosition = { "x": otherPosition.x + 6, "y": otherPosition.y + 6 };
-    var otherSize = game.entities.get(other, "size");
+    var otherSize = game.entities.getComponent(other, "size");
     otherSize = { "width": otherSize.width - 12, "height": otherSize.height - 12 };
 
     var dl = otherPosition.x - position.x;

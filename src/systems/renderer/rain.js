@@ -51,7 +51,7 @@ var rainDrops = [];
 var maxDrops = 1000;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function rain(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function rain(entity, elapsed) { // eslint-disable-line no-unused-vars
 
     if (rainDrops.length < maxDrops) {
       var randomXY = {
@@ -63,7 +63,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       spawnDrop(rainDrops, randomXY, randomLength, randomThickness, "rgba(255,255,255,0.5)");
     }
     moveDrops(rainDrops, elapsed);
-    drawDrops(context, rainDrops);
+    drawDrops(game.context, rainDrops);
     deleteOffScreenDrops(rainDrops);
 
   }, "camera");

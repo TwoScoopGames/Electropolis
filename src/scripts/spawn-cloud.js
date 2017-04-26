@@ -7,14 +7,14 @@ module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
     initClouds(game);
   }
 
-  var position = game.entities.get(entity, "position");
-  var name = game.entities.get(entity, "name");
+  var position = game.entities.getComponent(entity, "position");
+  var name = game.entities.getComponent(entity, "name");
   var clouds = ["bg-cloud1", "bg-cloud2", "bg-cloud3"];
   //choose random cloud to spawn
-  var cloud1 = game.instantiatePrefab(clouds[Math.floor(Math.random() * clouds.length)]);
-  var cloudPosition = game.entities.get(cloud1, "position");
-  var cloud1Velocity = game.entities.get(cloud1, "velocity");
-  var timers = game.entities.get(entity,"timers");
+  var cloud1 = game.prefabs.instantiate(game.entities, clouds[Math.floor(Math.random() * clouds.length)]);
+  var cloudPosition = game.entities.getComponent(cloud1, "position");
+  var cloud1Velocity = game.entities.getComponent(cloud1, "velocity");
+  var timers = game.entities.getComponent(entity,"timers");
 
   if (name === "cloudSpawner1") {
     cloud1Velocity.x = -.0575;

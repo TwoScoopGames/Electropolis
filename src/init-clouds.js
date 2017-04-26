@@ -1,13 +1,13 @@
 "use strict";
 
 var init = function(game) {
-  var camera = game.entities.get(0, "position");
+  var camera = game.entities.getComponent(0, "position");
   var clouds = ["bg-cloud1", "bg-cloud2", "bg-cloud3"];
 
   for (var i = 0; i < 12; i++) {
-    var cloud1 = game.instantiatePrefab(clouds[Math.floor(Math.random() * clouds.length)]);
-    var cloud1Position = game.entities.get(cloud1, "position");
-    var cloud1Velocity = game.entities.get(cloud1, "velocity");
+    var cloud1 = game.prefabs.instantiate(game.entities, clouds[Math.floor(Math.random() * clouds.length)]);
+    var cloud1Position = game.entities.getComponent(cloud1, "position");
+    var cloud1Velocity = game.entities.getComponent(cloud1, "velocity");
 
     if (i < 4) {
       cloud1Position.x = (camera.x + (600 * (i % 4)));

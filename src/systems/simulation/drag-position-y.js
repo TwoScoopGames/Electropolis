@@ -17,8 +17,8 @@ function zapMatches(game, matches) {
     pl += matches[i].length * 2;
     powerLevel.set(pl);
 
-    var powerLines = game.instantiatePrefab("powerLines");
-    var points = game.entities.get(powerLines, "lightningPoints");
+    var powerLines = game.prefabs.instantiate(game.entities, "powerLines");
+    var points = game.entities.getComponent(powerLines, "lightningPoints").points;
     points.unshift({ "x": x1, "y": y1 });
   }
 }
@@ -30,10 +30,10 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       return;
     }
 
-    var position = game.entities.get(entity, "position");
-    var size = game.entities.get(entity, "size");
+    var position = game.entities.getComponent(entity, "position");
+    var size = game.entities.getComponent(entity, "size");
     var mouse = getMousePos(game);
-    var drag = game.entities.get(entity, "dragY");
+    var drag = game.entities.getComponent(entity, "dragY");
 
     var inside = mouse.x >= position.x
         && mouse.x < position.x + size.width
@@ -41,8 +41,8 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         && mouse.y < position.y + size.height;
 
     // FIXME: this is bullshit
-    var gridPosition = game.entities.get(2, "position");
-    var gridSize = game.entities.get(2, "size");
+    var gridPosition = game.entities.getComponent(2, "position");
+    var gridSize = game.entities.getComponent(2, "size");
     var insideGrid = mouse.x >= gridPosition.x
       && mouse.x < gridPosition.x + gridSize.width
       && mouse.y >= gridPosition.y
@@ -68,7 +68,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     } else if (game.inputs.buttonReleased("action") && drag.offsetX !== undefined && drag.offsetY !== undefined) {
       var tilesMoved = Math.round((position.y - drag.startY) / (grid.tileSize + grid.tilePadding));
       if (Math.abs(tilesMoved) !== 0) {
-        var column = game.entities.get(entity, "column");
+        var column = game.entities.getComponent(entity, "column");
         console.log("column", column, "moved", tilesMoved);
         var matches = grid.rotateColumn(column, tilesMoved);
         if (matches.length > 0) {

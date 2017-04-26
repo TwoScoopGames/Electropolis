@@ -1,13 +1,13 @@
 {
-	"title": {
+  "title": {
     "first": true,
-		"onEnter": "./scripts/title-enter",
-		"onExit": "./scripts/title-exit"
-	},
-	"main": {
-		"onEnter": "./scripts/main-enter",
-		"onExit": "./scripts/main-exit"
-	},
+    "onEnter": "./scripts/title-enter",
+    "onExit": "./scripts/title-exit"
+  },
+  "main": {
+    "onEnter": "./scripts/main-enter",
+    "onExit": "./scripts/main-exit"
+  },
   "credits": {
     "onEnter": "./scripts/credits-enter",
     "onExit": "./scripts/credits-exit"

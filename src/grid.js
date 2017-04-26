@@ -191,12 +191,12 @@ function rotateRow(row, columnsMoved) {
 }
 
 function getTileX(game, x) {
-  var gridPos = game.entities.get(2, "position");
+  var gridPos = game.entities.getComponent(2, "position");
   return gridPos.x + api.gridPadding + (x * (api.tileSize + api.tilePadding));
 }
 
 function getTileY(game, y) {
-  var gridPos = game.entities.get(2, "position");
+  var gridPos = game.entities.getComponent(2, "position");
   return gridPos.y + api.gridPadding + (y * (api.tileSize + api.tilePadding));
 }
 
@@ -204,24 +204,24 @@ function createEntities(game) {
   var cols = [];
   var rows = [];
 
-  var gridPos = game.entities.get(2, "position");
+  var gridPos = game.entities.getComponent(2, "position");
 
   var x, y, row, col;
   for (y = 0; y < api.gridHeight; y++) {
-    row = game.instantiatePrefab("row");
-    game.entities.set(row, "row", y);
+    row = game.prefabs.instantiate(game.entities, "row");
+    game.entities.setComponent(row, "row", y);
     rows.push(row);
-    var rowPosition = game.entities.get(row, "position");
+    var rowPosition = game.entities.getComponent(row, "position");
     rowPosition.x = gridPos.x + api.gridPadding - (api.tilePadding / 2);
     rowPosition.y = getTileY(game, y) - (api.tilePadding / 2);
 
     for (x = 0; x < api.gridWidth; x++) {
       if (cols[x] === undefined) {
-        cols[x] = game.instantiatePrefab("column");
-        game.entities.set(cols[x], "column", x);
+        cols[x] = game.prefabs.instantiate(game.entities, "column");
+        game.entities.setComponent(cols[x], "column", x);
       }
       col = cols[x];
-      var colPosition = game.entities.get(col, "position");
+      var colPosition = game.entities.getComponent(col, "position");
       colPosition.x = getTileX(game, x) - (api.tilePadding / 2);
       colPosition.y = gridPos.y + api.gridPadding - (api.tilePadding / 2);
 
@@ -230,7 +230,7 @@ function createEntities(game) {
   }
   for (x = 0; x < api.gridWidth; x++) {
     col = cols[x];
-    colPosition = game.entities.get(col, "position");
+    colPosition = game.entities.getComponent(col, "position");
     for (y = -1; y > -1 - api.gridHeight; y--) {
       makeTile(game, get(x, api.gridHeight + y), getTileX(game, x), getTileY(game, y), col, colPosition.x, col, colPosition.y);
       makeTile(game, get(x, -1 - y), getTileX(game, x), getTileY(game, api.gridHeight - 1 - y), col, colPosition.x, col, colPosition.y);
@@ -238,7 +238,7 @@ function createEntities(game) {
   }
   for (y = 0; y < api.gridHeight; y++) {
     row = rows[y];
-    rowPosition = game.entities.get(row, "position");
+    rowPosition = game.entities.getComponent(row, "position");
     for (x = -1; x > -1 - api.gridWidth; x--) {
       makeTile(game, get(api.gridWidth + x, y), getTileX(game, x), getTileY(game, y), row, rowPosition.x, row, rowPosition.y);
       makeTile(game, get(-1 - x, y), getTileX(game, api.gridWidth - 1 - x), getTileY(game, y), row, rowPosition.x, row, rowPosition.y);
@@ -250,25 +250,21 @@ function makeTile(game, prefab, x, y, row, rowX, column, columnY) {
   if (prefab === undefined) {
     return;
   }
-  var tile = game.instantiatePrefab(prefab);
-  var position = game.entities.get(tile, "position");
+  var tile = game.prefabs.instantiate(game.entities, prefab);
+  var position = game.entities.getComponent(tile, "position");
   position.x = x;
   position.y = y;
   if (row) {
-    game.entities.set(tile, "matchX", {
-      "id": row,
-      "offset": x - rowX
-    });
+    var matchX = game.entities.addComponent(tile, "matchX");
+    matchX.id = row;
+    matchX.offset = x - rowX;
   }
   if (column) {
-    game.entities.set(tile, "matchY", {
-      "id": column,
-      "offset": y - columnY
-    });
+    var matchY = game.entities.addComponent(tile, "matchY");
+    matchY.id = column;
+    matchY.offset = y - columnY;
   }
-  game.entities.set(tile, "fadeOutside", {
-    "id": 2
-  });
+  game.entities.setComponent(tile, "fadeOutside", 2);
   return tile;
 }
 

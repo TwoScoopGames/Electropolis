@@ -1,31 +1,25 @@
 {
  "simulation": [
   {
-   "name": "splat-ecs/lib/systems/match-canvas-size",
+   "name": "splat-ecs/lib/systems/simulation/match-canvas-size",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/match-center-x",
+   "name": "splat-ecs/lib/systems/simulation/match-center",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/match-center-y",
+   "name": "splat-ecs/lib/systems/simulation/advance-timers",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/advance-timers",
-   "scenes": [
-    "title", "main", "credits"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/advance-animations",
+   "name": "splat-ecs/lib/systems/simulation/advance-animations",
    "scenes": [
     "title", "main", "credits"
    ]
@@ -73,37 +67,37 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/control-player",
+   "name": "splat-ecs/lib/systems/simulation/control-player",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/apply-movement-2d",
+   "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/apply-velocity",
+   "name": "splat-ecs/lib/systems/simulation/apply-velocity",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/apply-friction",
+   "name": "splat-ecs/lib/systems/simulation/apply-friction",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/follow-parent",
+   "name": "splat-ecs/lib/systems/simulation/follow-parent",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/box-collider",
+   "name": "splat-ecs/lib/systems/simulation/box-collider",
    "scenes": [
     "title", "main", "credits"
    ]
@@ -135,13 +129,13 @@
  ],
  "renderer": [
   {
-   "name": "splat-ecs/lib/systems/clear-screen",
+   "name": "splat-ecs/lib/systems/renderer/clear-screen",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/viewport-move-to-camera",
+   "name": "splat-ecs/lib/systems/renderer/viewport-move-to-camera",
    "scenes": [
     "title", "main", "credits"
    ]
@@ -153,7 +147,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/draw-image",
+   "name": "splat-ecs/lib/systems/renderer/draw-image",
    "scenes": [
     "title", "main", "credits"
    ]
@@ -171,18 +165,18 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/draw-rectangles",
+   "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
    "scenes": [
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/viewport-reset",
+   "name": "splat-ecs/lib/systems/renderer/viewport-reset",
    "scenes": [
     "title", "main", "credits"
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/draw-frame-rate",
+   "name": "splat-ecs/lib/systems/renderer/draw-frame-rate",
    "scenes": [
    ]
   }

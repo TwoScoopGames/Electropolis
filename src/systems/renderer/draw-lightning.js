@@ -32,10 +32,10 @@ function drawLightning(points, context, elapsed) {
 }
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function drawLightningSystem(entity, context, elapsed) { // eslint-disable-line no-unused-vars
-    var lightning = game.entities.get(entity, "lightning");
+  ecs.addEach(function drawLightningSystem(entity, elapsed) { // eslint-disable-line no-unused-vars
+    var lightning = game.entities.getComponent(entity, "lightning");
     if (lightning.elapsed > whiteFadeTime) {
-      game.entities.remove(entity);
+      game.entities.destroy(entity);
     } else {
       if (lightning.elapsed === undefined) {
         lightning.elapsed = 0;
@@ -43,7 +43,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         lightning.elapsed += elapsed;
       }
 
-      drawLightning(lightning.points, context, lightning.elapsed);
+      drawLightning(lightning.points, game.context, lightning.elapsed);
     }
 
   }, "lightning");

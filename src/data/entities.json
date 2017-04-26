@@ -9,10 +9,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 1
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 1
       },
       "fillColor": "#454C56"
@@ -40,8 +37,8 @@
         "width": 1801,
         "height": 1781
       },
-      "matchCenterX": {
-        "id": 1
+      "matchCenter": {
+        "x": 1
       },
       "image":{
         "name": "logo.png"
@@ -58,8 +55,8 @@
         "width": 5000,
         "height": 323
       },
-      "matchCenterX": {
-        "id": 1
+      "matchCenter": {
+        "x": 1
       },
       "fillColor": "#76894e"
 
@@ -79,7 +76,7 @@
       "image":{
         "name": "button-play-up.png"
       },
-      "pressed-image":{
+      "pressedImage":{
         "name": "button-play-down.png"
       }
     },
@@ -118,7 +115,7 @@
       "image":{
         "name": "button-credits-up.png"
       },
-      "pressed-image":{
+      "pressedImage":{
         "name": "button-credits-down.png"
       }
     },
@@ -173,10 +170,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 1
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 1
       },
       "fillColor": "#454C56"
@@ -294,8 +288,8 @@
         "width": 1515,
         "height": 288
       },
-      "matchCenterX": {
-        "id": 1
+      "matchCenter": {
+        "x": 1
       },
       "image": {
         "name": "foreground.png"
@@ -312,8 +306,8 @@
         "width": 5000,
         "height": 350
       },
-      "matchCenterX": {
-        "id": 1
+      "matchCenter": {
+        "x": 1
       },
       "fillColor": "#97B26D"
     },
@@ -1876,10 +1870,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 1
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 1
       },
       "fillColor": "#9F4C9D"

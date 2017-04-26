@@ -12,6 +12,6 @@ module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
     return;
   }
 
-  var timers = game.entities.get(entity, "timers");
+  var timers = game.entities.getComponent(entity, "timers");
   timers.decrement.running = true;
 };

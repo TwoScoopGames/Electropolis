@@ -7,8 +7,8 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.add(function fillSolidColor(entities) {
     var ids = entities.find("fill-solid-color");
     ids.sort(function(a, b) {
-      var pa = entities.get(a, "position");
-      var pb = entities.get(b, "position");
+      var pa = entities.getComponent(a, "position");
+      var pb = entities.getComponent(b, "position");
       var za = pa.z || 0;
       var zb = pb.z || 0;
       var ya = pa.y || 0;
@@ -18,9 +18,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     for (var i = 0; i < ids.length; i++) {
       var entity = ids[i];
-      var position = game.entities.get(entity, "position");
-      var size = game.entities.get(entity, "size");
-      var fillColor = game.entities.get(entity, "fillColor");
+      var position = game.entities.getComponent(entity, "position");
+      var size = game.entities.getComponent(entity, "size");
+      var fillColor = game.entities.getComponent(entity, "fillColor");
       game.context.fillStyle = fillColor;
       game.context.fillRect(position.x, position.y, size.width, size.height);
     }

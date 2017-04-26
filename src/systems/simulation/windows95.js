@@ -4,8 +4,8 @@ var powerLevel = require("../../powerLevel");
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function windows95(entity, elapsed) { // eslint-disable-line no-unused-vars
-    var powerThreshold = game.entities.get(entity, "powerThreshold");
-    var animation = game.entities.get(entity, "animation");
+    var powerThreshold = game.entities.getComponent(entity, "powerThreshold");
+    var animation = game.entities.getComponent(entity, "animation");
     animation.loop = false;
     if (powerThreshold > powerLevel.get()) {
       animation.frame = 0;

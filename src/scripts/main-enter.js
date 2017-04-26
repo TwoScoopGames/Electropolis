@@ -11,7 +11,7 @@ function generatePowerThresholds(game) {
   var step = 100 / entitiesWithPowerThreshold.length;
   var powerLevel = step;
   for (var i = 0; i < entitiesWithPowerThreshold.length; i++) {
-    game.entities.set(entitiesWithPowerThreshold[i], "powerThreshold", powerLevel);
+    game.entities.setComponent(entitiesWithPowerThreshold[i], "powerThreshold", powerLevel);
     powerLevel += step;
   }
 }
