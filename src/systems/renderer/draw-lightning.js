@@ -36,6 +36,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var lightning = game.entities.getComponent(entity, "lightning");
     if (lightning.elapsed > whiteFadeTime) {
       game.entities.destroy(entity);
+      lightning.elapsed = undefined;
     } else {
       if (lightning.elapsed === undefined) {
         lightning.elapsed = 0;
